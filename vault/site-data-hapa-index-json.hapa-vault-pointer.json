@@ -1,0 +1,31 @@
+{
+  "schema": "hapa.vault.pointer.v1",
+  "id": "pointer:hapa:site-data-hapa-index-json",
+  "repo": "hapa",
+  "source_repo": "$HAPA_DESKTOP_ROOT/hapa",
+  "source_root": "site/data/hapa-index.json",
+  "source_path": "$HAPA_DESKTOP_ROOT/hapa/site/data/hapa-index.json",
+  "route_type": "vault_pointer",
+  "vault_collection": "generated/site-indexes",
+  "feed_id": "hapa-vault/generated/site-indexes/hapa",
+  "transfer_policy": "private_local_first",
+  "required_env": "HAPA_VAULT_ROOT",
+  "vault_relative_path": "generated/site-indexes/hapa/site/data/hapa-index.json",
+  "vault_root_hint": "$HAPA_VAULT_ROOT",
+  "destination_path": "$HAPA_VAULT_ROOT/generated/site-indexes/hapa/site/data/hapa-index.json",
+  "destination_tree_sha256": "e5e17b1457954414676e98f050569c6b3e0db545d633a76b730d749877550149",
+  "destination_hash_matches": true,
+  "manifest_path": "manifests/transfers/hapa-vault-generated-site-indexes-hapa.json",
+  "ignore_entries": [
+    "site/data/hapa-index.json"
+  ],
+  "tree_sha256": "e5e17b1457954414676e98f050569c6b3e0db545d633a76b730d749877550149",
+  "hash_algorithm": "sha256-tree-v1",
+  "bytes": 32088431,
+  "file_count": 1,
+  "publication_policy": "Do not publish generated site index in source history; rebuild from vault or publish a pointer manifest only.",
+  "sensitivity": "derived generated index may expose local content references",
+  "status": "planned_after_vault_copy_and_hash_verification",
+  "fallback": "Run the guarded vault route executor after setting HAPA_VAULT_ROOT.",
+  "generated_at": "2026-06-01T20:03:57.367Z"
+}

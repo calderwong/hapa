@@ -1,0 +1,885 @@
+/* Hapa/Astros design skill pass for the static brochure front door. */
+:root {
+  --astro-bg: #020617;
+  --astro-bg-2: #030712;
+  --astro-panel: rgba(8, 15, 28, 0.78);
+  --astro-panel-2: rgba(15, 23, 42, 0.68);
+  --astro-line: rgba(148, 163, 184, 0.22);
+  --astro-cyan: #5eead4;
+  --astro-blue: #38bdf8;
+  --astro-fuchsia: #f472b6;
+  --astro-gold: #fbbf24;
+  --astro-green: #86efac;
+  --astro-rose: #fb7185;
+  --radius: 12px;
+  --line: var(--astro-line);
+  --line-hot: rgba(94, 234, 212, 0.55);
+  --cyan: var(--astro-cyan);
+  --gold: var(--astro-gold);
+  --rose: var(--astro-fuchsia);
+  --green: var(--astro-green);
+}
+
+html {
+  scrollbar-color: var(--astro-cyan) rgba(2, 6, 23, 0.92);
+  scrollbar-width: thin;
+}
+
+* {
+  scrollbar-color: var(--astro-cyan) rgba(2, 6, 23, 0.92);
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(2, 6, 23, 0.92);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--astro-cyan), var(--astro-fuchsia));
+  border: 2px solid rgba(2, 6, 23, 0.92);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #99f6e4, #f9a8d4);
+}
+
+body {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(2, 6, 23, 0.94), rgba(3, 7, 18, 0.92)),
+    linear-gradient(90deg, rgba(94, 234, 212, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    var(--astro-bg);
+  background-size: auto, 48px 48px, 48px 48px, auto;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -4;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent, rgba(94, 234, 212, 0.09), transparent),
+    linear-gradient(180deg, transparent 0 56%, rgba(251, 191, 36, 0.04) 56% 57%, transparent 57%);
+  background-size: 420px 100%, 100% 140px;
+  opacity: 0.48;
+}
+
+.radar-orb {
+  display: none;
+}
+
+.starfield {
+  opacity: 0.12;
+}
+
+.grain {
+  opacity: 0.05;
+}
+
+.scanlines {
+  opacity: 0.13;
+  background-size: 100% 5px;
+}
+
+h1,
+h2,
+h3,
+.brand-copy b,
+.door strong,
+.node-card b,
+.hapa-card h3,
+.status-grid span,
+.roadmap b {
+  letter-spacing: 0 !important;
+}
+
+h1 {
+  font-size: 72px !important;
+  line-height: 0.96;
+}
+
+h2 {
+  font-size: 52px !important;
+  line-height: 1;
+}
+
+h3 {
+  line-height: 1.08;
+}
+
+.eyebrow,
+.section-kicker,
+.brand-copy small,
+.brief-card small,
+.node-card small,
+.hapa-card small,
+.door small,
+.roadmap span,
+.mode-panel small,
+.status,
+.truth-band span,
+.link-cluster a,
+.proof-links a,
+.snapshot-readout,
+.content-badges span,
+.wiki-link-pill small,
+.browser-top,
+.repo-row code,
+.repo-file-list code {
+  letter-spacing: 0 !important;
+}
+
+:where(a, button, input, select):focus-visible {
+  outline: 2px solid var(--astro-cyan);
+  outline-offset: 3px;
+}
+
+section[id],
+.node-flowchart {
+  scroll-margin-top: 104px;
+}
+
+.topbar {
+  min-height: 70px;
+  border-bottom-color: rgba(94, 234, 212, 0.18);
+  background: rgba(2, 6, 23, 0.84);
+  box-shadow: 0 1px 0 rgba(244, 114, 182, 0.14), 0 18px 70px rgba(0, 0, 0, 0.2);
+}
+
+.topbar[data-elevated="true"] {
+  background: rgba(2, 6, 23, 0.94);
+  box-shadow: 0 1px 0 rgba(94, 234, 212, 0.28), 0 24px 90px rgba(0, 0, 0, 0.42);
+}
+
+.brand-mark {
+  border-radius: 10px;
+  background:
+    linear-gradient(135deg, rgba(94, 234, 212, 0.18), rgba(244, 114, 182, 0.08)),
+    rgba(15, 23, 42, 0.86);
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  color: #cbd5e1;
+}
+
+.top-actions {
+  align-items: center;
+}
+
+.palette-button,
+.sound-toggle,
+.button,
+.filter,
+.mode-panel,
+.repo-row,
+.repo-file-list button,
+.wiki-link-pill,
+.hapa-card a {
+  min-height: 42px;
+  border-radius: 10px !important;
+}
+
+.palette-button,
+.sound-toggle {
+  height: 42px;
+  padding-inline: 14px;
+  background: rgba(15, 23, 42, 0.76);
+}
+
+.sound-toggle[aria-pressed="true"] {
+  color: var(--astro-green);
+  border-color: rgba(134, 239, 172, 0.54);
+  background: rgba(20, 83, 45, 0.22);
+}
+
+.operator-hud {
+  position: relative;
+  z-index: 12;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.hud-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 9px 11px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 10px;
+  background: rgba(8, 15, 28, 0.66);
+  color: #94a3b8;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  font: 12px/1.2 var(--mono);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hud-chip i {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--astro-blue);
+  box-shadow: 0 0 16px var(--astro-blue);
+}
+
+.hud-chip b {
+  color: #e2e8f0;
+}
+
+.hud-chip em {
+  color: var(--astro-gold);
+  font-style: normal;
+}
+
+.hud-live {
+  border-color: rgba(134, 239, 172, 0.26);
+}
+
+.hud-live i {
+  background: var(--astro-green);
+  box-shadow: 0 0 16px var(--astro-green);
+}
+
+.hero {
+  min-height: auto;
+  padding-top: 42px;
+}
+
+.hero-grid {
+  align-items: start;
+}
+
+.hero-lede,
+.section-head p,
+.wiki-copy p {
+  color: #b6c2d6;
+}
+
+.button {
+  padding-inline: 18px;
+  box-shadow: none;
+}
+
+.button.primary {
+  background: linear-gradient(135deg, var(--astro-cyan), var(--astro-gold));
+  color: #020617;
+}
+
+.button.ghost,
+.button.glass {
+  background: rgba(15, 23, 42, 0.74);
+}
+
+.button:hover,
+.entry-role-row a:hover,
+.door:hover,
+.node-card:hover,
+.hapa-card:hover,
+.living-card:hover,
+.mode-panel:hover,
+.mode-panel.active {
+  transform: translateY(-2px);
+}
+
+.hero-telemetry {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+  max-width: 760px;
+}
+
+.hero-telemetry span {
+  min-height: 66px;
+  padding: 12px;
+  border: 1px solid rgba(94, 234, 212, 0.18);
+  border-radius: 12px;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.78), rgba(2, 6, 23, 0.62)),
+    linear-gradient(90deg, rgba(94, 234, 212, 0.08), transparent);
+}
+
+.hero-telemetry b,
+.hero-telemetry small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.hero-telemetry b {
+  color: #f8fafc;
+  font: 800 19px/1.1 var(--mono);
+}
+
+.hero-telemetry small {
+  margin-top: 6px;
+  color: #94a3b8;
+  font: 11px/1.25 var(--mono);
+}
+
+.command-deck {
+  min-height: 570px;
+}
+
+.node-card-thumb {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  padding: 4px;
+  border: 1px solid rgba(94, 234, 212, 0.28);
+  border-radius: 14px;
+  background: rgba(2, 6, 23, 0.58);
+  box-shadow: 0 0 26px rgba(94, 234, 212, 0.14);
+}
+
+.node-card:hover .node-card-thumb {
+  border-color: rgba(251, 191, 36, 0.5);
+  box-shadow: 0 0 34px rgba(251, 191, 36, 0.16), 0 0 24px rgba(94, 234, 212, 0.14);
+}
+
+.nexus-card,
+.terminal-card,
+.brief-card,
+.node-card,
+.hapa-card,
+.status-grid article,
+.mode-panel,
+.door,
+.file-browser,
+.wiki-copy,
+.data-console,
+.markdown-viewer,
+.node-flowchart,
+.card-live-stage,
+.repo-list-shell,
+.repo-inspector,
+.roadmap,
+.skim-meter,
+.compression-card,
+.protocol-layer-cake,
+.entry-role-row a,
+.palette-shell,
+.card-inspector .detail-shell {
+  border-radius: 12px !important;
+  background-color: var(--astro-panel);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 24px 80px rgba(0, 0, 0, 0.22);
+}
+
+.nexus-card,
+.node-flowchart,
+.card-live-stage {
+  border-color: rgba(94, 234, 212, 0.24);
+}
+
+.nexus-card::before {
+  border-radius: 8px;
+  border-color: rgba(94, 234, 212, 0.16);
+}
+
+.deck-topline,
+.truth-band,
+.filter-row,
+.proof-links,
+.link-cluster,
+.media-stats,
+.content-badges {
+  gap: 8px;
+}
+
+.status,
+.truth-band span,
+.link-cluster a,
+.proof-links a,
+.media-stats span,
+.content-badges span,
+.live-type {
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.72);
+}
+
+.status.live,
+.status.partial {
+  background: rgba(15, 23, 42, 0.78);
+}
+
+.mode-rail {
+  border-radius: 14px;
+  background: rgba(2, 6, 23, 0.76);
+}
+
+.mode-dot {
+  width: 42px;
+  height: 42px;
+}
+
+.mode-dot:hover {
+  width: 126px;
+  border-radius: 10px;
+}
+
+.section-head {
+  margin-bottom: 28px;
+}
+
+.mission,
+.mode-section,
+.journey,
+.loop-section,
+.wiki-section,
+.nodes-section,
+.cards-section,
+.progress-section,
+.roadmap-section,
+.final-cta,
+.lightweb-section {
+  border-top-color: rgba(94, 234, 212, 0.14);
+}
+
+.nodes-section.section-shell {
+  width: min(1440px, calc(100% - 44px));
+}
+
+.node-flowchart {
+  overflow: auto;
+}
+
+.flowchart-head {
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.48fr);
+}
+
+.flowchart-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(94, 234, 212, 0.14);
+  background: rgba(2, 6, 23, 0.38);
+}
+
+.flowchart-stats span {
+  min-height: 54px;
+  padding: 10px 12px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.62);
+  font-family: var(--mono);
+}
+
+.flowchart-stats b,
+.flowchart-stats small {
+  display: block;
+}
+
+.flowchart-stats b {
+  color: #f8fafc;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.flowchart-stats small {
+  margin-top: 6px;
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.node-flow-svg {
+  display: block;
+  min-width: 1120px;
+  background:
+    linear-gradient(transparent 39px, rgba(94, 234, 212, 0.06) 40px),
+    linear-gradient(90deg, transparent 39px, rgba(148, 163, 184, 0.07) 40px),
+    rgba(2, 6, 23, 0.38);
+  background-size: 40px 40px, 40px 40px, auto;
+}
+
+.flow-boundary {
+  rx: 20px;
+  fill: rgba(2, 6, 23, 0.28);
+  stroke: rgba(94, 234, 212, 0.22);
+  stroke-dasharray: 12 8;
+}
+
+.flow-label,
+.flow-legend text {
+  fill: #cbd5e1;
+  font: 14px/1 var(--mono);
+  letter-spacing: 0 !important;
+}
+
+.flow-lane,
+.flow-spine {
+  fill: rgba(15, 23, 42, 0.26);
+  stroke-width: 1.4;
+  stroke-dasharray: 8 8;
+}
+
+.lane-source {
+  stroke: rgba(148, 163, 184, 0.26);
+}
+
+.lane-memory {
+  stroke: rgba(94, 234, 212, 0.28);
+}
+
+.lane-media {
+  stroke: rgba(251, 191, 36, 0.28);
+}
+
+.lane-surface {
+  stroke: rgba(134, 239, 172, 0.28);
+}
+
+.flow-spine {
+  fill: rgba(8, 15, 28, 0.68);
+  stroke: rgba(94, 234, 212, 0.3);
+  stroke-dasharray: none;
+}
+
+.flow-spine-label,
+.flow-lane-labels text {
+  fill: var(--astro-cyan);
+  font: 800 13px var(--mono);
+  letter-spacing: 0 !important;
+}
+
+.flow-line {
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  marker-end: url("#arrow-cyan");
+  filter: url("#flowGlow");
+}
+
+.flow-line.main {
+  stroke-width: 5.5;
+}
+
+.flow-line.cyan {
+  stroke: #67e8f9;
+  marker-end: url("#arrow-cyan");
+}
+
+.flow-line.gold {
+  stroke: #f6c96d;
+  marker-end: url("#arrow-gold");
+}
+
+.flow-line.green {
+  stroke: #68f7b0;
+  marker-end: url("#arrow-green");
+}
+
+.flow-line.rose {
+  stroke: #ff6d9a;
+  marker-end: url("#arrow-rose");
+}
+
+.flow-line.dashed {
+  stroke-dasharray: 10 11;
+}
+
+.flow-node rect {
+  width: 220px;
+  height: 118px;
+  rx: 16px;
+  fill: rgba(15, 23, 42, 0.94);
+  stroke: #67e8f9;
+  stroke-width: 2.2;
+}
+
+.flow-node text {
+  text-anchor: middle;
+  font-family: var(--mono);
+  letter-spacing: 0 !important;
+}
+
+.flow-node .node-title {
+  fill: #f8fafc;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.flow-node .node-sub {
+  fill: #cbd5e1;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.flow-node .node-meta {
+  fill: #94a3b8;
+  font-size: 12px;
+}
+
+.flow-node.source rect {
+  stroke: #94a3b8;
+  fill: rgba(30, 41, 59, 0.84);
+}
+
+.flow-node.memory rect {
+  stroke: #67e8f9;
+  fill: rgba(8, 51, 68, 0.72);
+}
+
+.flow-node.cards rect,
+.flow-node.media rect {
+  stroke: #f6c96d;
+  fill: rgba(120, 53, 15, 0.54);
+}
+
+.flow-node.app rect,
+.flow-node.surface rect {
+  stroke: #68f7b0;
+  fill: rgba(6, 78, 59, 0.56);
+}
+
+.flow-node.trust rect {
+  stroke: #ff6d9a;
+  fill: rgba(136, 19, 55, 0.54);
+}
+
+.flow-hub-panel {
+  fill: rgba(2, 6, 23, 0.92);
+  stroke: rgba(251, 191, 36, 0.78);
+  stroke-width: 2.8;
+  filter: url("#flowGlow");
+}
+
+.flow-hub circle {
+  fill: rgba(251, 191, 36, 0.1);
+  stroke: rgba(251, 191, 36, 0.86);
+  stroke-width: 2.4;
+}
+
+.flow-hub text {
+  text-anchor: middle;
+  font-family: var(--mono);
+  letter-spacing: 0 !important;
+}
+
+.flow-hub .hub-title {
+  fill: #f8fafc;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.flow-hub .hub-sub {
+  fill: #fde68a;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.flow-hub .hub-meta {
+  fill: #cbd5e1;
+  font-size: 13px;
+}
+
+.lg-green {
+  fill: #68f7b0;
+}
+
+.brief-card,
+.node-card,
+.hapa-card,
+.compression-card,
+.mode-panel,
+.door,
+.living-card,
+.repo-row,
+.wiki-row {
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.brief-card:hover,
+.node-card:hover,
+.hapa-card:hover,
+.compression-card:hover,
+.door:hover,
+.living-card:hover,
+.repo-row:hover,
+.wiki-row:hover {
+  border-color: rgba(94, 234, 212, 0.48);
+  box-shadow: inset 3px 0 0 rgba(94, 234, 212, 0.72), 0 22px 80px rgba(0, 0, 0, 0.32);
+}
+
+.search-box {
+  gap: 7px;
+}
+
+.search-box span,
+.repo-toolbar code,
+.browser-top code {
+  color: var(--astro-cyan);
+}
+
+.search-box input,
+select,
+.command-palette input {
+  min-height: 44px;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 10px;
+  background: rgba(2, 6, 23, 0.78);
+  color: #e2e8f0;
+}
+
+select {
+  padding-inline: 12px 34px;
+  color-scheme: dark;
+}
+
+.data-toolbar,
+.card-controls,
+.repo-toolbar {
+  gap: 10px;
+}
+
+.wiki-results,
+.repo-list,
+.repo-file-list,
+.repo-markdown,
+.markdown-body,
+.palette-results,
+.wiki-reader-body,
+.wiki-reader-sidebar,
+.card-inspector,
+.card-inspector .detail-shell {
+  overscroll-behavior: contain;
+}
+
+.wiki-results,
+.repo-list {
+  max-height: 640px;
+}
+
+.wiki-row,
+.repo-row,
+.repo-file-list button {
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.48);
+}
+
+.loop-board,
+.protocol-layer-cake,
+.roadmap {
+  border-radius: 12px;
+}
+
+.loop-step {
+  min-height: 230px;
+  background: rgba(8, 15, 28, 0.42);
+}
+
+.living-card {
+  border-radius: 12px;
+}
+
+.living-media {
+  min-height: 150px;
+}
+
+.card-face {
+  border-radius: 10px;
+}
+
+.status-grid span {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.palette-shell {
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(2, 6, 23, 0.98)),
+    var(--astro-bg);
+}
+
+.palette-item {
+  border-radius: 10px;
+}
+
+.palette-item:hover,
+.palette-item:focus {
+  background: rgba(94, 234, 212, 0.08);
+}
+
+.terminal-card {
+  border-color: rgba(94, 234, 212, 0.34);
+}
+
+.terminal-card pre {
+  color: var(--astro-green);
+}
+
+@media (max-width: 1080px) {
+  .operator-hud,
+  .hero-telemetry {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flowchart-head {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 58px !important;
+  }
+
+  h2 {
+    font-size: 42px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .topbar {
+    align-items: flex-start;
+  }
+
+  .operator-hud,
+  .hero-telemetry,
+  .flowchart-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .hud-chip {
+    white-space: normal;
+  }
+
+  h1 {
+    font-size: 42px !important;
+  }
+
+  h2 {
+    font-size: 32px !important;
+  }
+
+  .hero {
+    padding-top: 28px;
+  }
+
+  .status-grid span {
+    font-size: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    display: none;
+  }
+}

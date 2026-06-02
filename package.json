@@ -1,0 +1,24 @@
+{
+  "name": "hapa-node-space",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local Electron host for Hapa Node Space with filesystem, wiki, song library, and protocol flow tooling.",
+  "main": "electron/main.js",
+  "type": "commonjs",
+  "bin": {
+    "hapa-node-space": "bin/hapa-node-space.js"
+  },
+  "scripts": {
+    "start": "electron .",
+    "desktop": "electron .",
+    "api": "node bin/hapa-node-space.js serve-api",
+    "cli": "node bin/hapa-node-space.js",
+    "sync:node-icons": "node bin/sync-node-icon-consumers.js",
+    "check": "node --check electron/main.js && node --check electron/preload.js && node --check electron/hapa-local.js && node --check bin/hapa-node-space.js && node --check bin/sync-node-icon-consumers.js && node --check site/app.js && node --check --input-type=module < site/node-space.js",
+    "smoke:desktop": "node electron/hapa-local.js --smoke",
+    "smoke:cli": "node bin/hapa-node-space.js health && node bin/hapa-node-space.js capabilities"
+  },
+  "devDependencies": {
+    "electron": "^42.2.0"
+  }
+}

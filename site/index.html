@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en" data-mode="browse">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hapa — sovereign memory operating world</title>
+  <meta name="description" content="Hapa is a local-first myth engine: wiki, cards, nodes, Phamiliars, media loops, and operator dashboards for humans and AI agents." />
+  <meta name="theme-color" content="#050914" />
+  <link rel="stylesheet" href="styles.css?v=nodegraph-cleanup" />
+  <link rel="stylesheet" href="astros-hapa.css?v=skill-pass-20260523" />
+</head>
+<body>
+  <div class="starfield" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="radar-orb orb-one" aria-hidden="true"></div>
+  <div class="radar-orb orb-two" aria-hidden="true"></div>
+
+  <header class="topbar" data-elevated="false">
+    <a class="brand" href="#top" aria-label="Hapa home">
+      <span class="brand-mark">H</span>
+      <span class="brand-copy"><b>Hapa</b><small>sovereign memory / myth ops</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#mission">Mission</a>
+      <a href="#lightweb">Light-Web</a>
+      <a href="#modes">Modes</a>
+      <a href="#wiki">Wiki</a>
+      <a href="#nodes">Nodes</a>
+      <a href="node-space.html">3D Map</a>
+      <a href="#cards">Cards</a>
+      <a href="#repos">Repos</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+    <div class="top-actions">
+      <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false">SFX OFF</button>
+      <button class="palette-button" id="paletteButton" type="button" aria-label="Open Hapa command map">⌘K</button>
+    </div>
+  </header>
+
+  <div class="operator-hud section-shell" aria-label="Current Hapa operating status">
+    <span class="hud-chip hud-live"><i></i><b>LOCAL</b> static front door</span>
+    <span class="hud-chip"><i></i><b>WIKI</b> in-site reader</span>
+    <span class="hud-chip"><i></i><b>CARDS</b> media snapshot</span>
+    <span class="hud-chip"><i></i><b>MODE</b> <em id="hudModeReadout">BROWSE</em></span>
+  </div>
+
+  <aside class="mode-rail" aria-label="Mode Gravity controls">
+    <button class="mode-dot active" data-mode-target="browse" type="button"><span></span>Browse</button>
+    <button class="mode-dot" data-mode-target="inspect" type="button"><span></span>Inspect</button>
+    <button class="mode-dot" data-mode-target="navigate" type="button"><span></span>Navigate</button>
+    <button class="mode-dot" data-mode-target="forge" type="button"><span></span>Forge</button>
+    <button class="mode-dot" data-mode-target="lore" type="button"><span></span>Lore</button>
+  </aside>
+
+  <main id="top">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> HAPA FRONT DOOR // LIGHT-WEB × ASTRO × CARD FANTASY</p>
+          <h1 id="hero-title">Your laptop becomes a sovereign node in a world that remembers.</h1>
+          <p class="hero-lede">Hapa compresses lived context into source-backed canon, playable cards, Phamiliars, media loops, and operator nodes — a local-first Light-Web where useful work keeps provenance and value.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#mission">Begin mission briefing</a>
+            <a class="button ghost" href="local-desktop/Hapa_Worldbuilding_Wiki/README.md">Open the wiki vault</a>
+            <button class="button glass" id="reticleButton" type="button">Ping the reticle</button>
+          </div>
+          <div class="truth-band" aria-label="Truth hierarchy">
+            <span><b>01</b> Network / ledger truth</span>
+            <span><b>02</b> Local SQLite / wiki truth</span>
+            <span><b>03</b> UI observer, never oracle</span>
+          </div>
+          <div class="hero-telemetry" aria-label="Local Hapa telemetry snapshot">
+            <span><b>29</b><small>repos tracked</small></span>
+            <span><b>10/10</b><small>priority systems</small></span>
+            <span><b>STATIC</b><small>wiki/card index</small></span>
+            <span><b>PARTIAL</b><small>truth-aware status</small></span>
+          </div>
+        </div>
+
+        <div class="command-deck" aria-label="Hapa command deck visual">
+          <div class="deck-topline">
+            <span class="status live">VERIFIED LOCAL</span>
+            <span class="status partial">PARTIAL MAP</span>
+            <span class="status">MODE: <b id="modeReadout">BROWSE</b></span>
+          </div>
+          <div class="nexus-card">
+            <div class="reticle" id="heroReticle" aria-hidden="true"></div>
+            <svg class="nexus-svg" viewBox="0 0 640 520" role="img" aria-label="Hapa system constellation">
+              <defs>
+                <radialGradient id="goldCore" cx="50%" cy="50%" r="55%">
+                  <stop offset="0%" stop-color="#f6c96d" stop-opacity="0.95" />
+                  <stop offset="45%" stop-color="#67e8f9" stop-opacity="0.18" />
+                  <stop offset="100%" stop-color="#050914" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <circle cx="320" cy="260" r="190" fill="url(#goldCore)" />
+              <path class="orbit o1" d="M86 260a234 128 0 1 0 468 0a234 128 0 1 0-468 0" />
+              <path class="orbit o2" d="M160 130a205 205 0 1 0 320 260a205 205 0 1 0-320-260" />
+              <path class="cable" d="M320 260 L320 92 M320 260 L498 184 M320 260 L474 390 M320 260 L166 390 M320 260 L150 172" />
+              <g class="core"><circle cx="320" cy="260" r="58"/><text x="320" y="254">HAPA</text><text x="320" y="278">CORE</text></g>
+              <g class="sat s1" transform="translate(320 92)"><circle r="30"/><rect class="sat-pill" x="-45" y="38" width="90" height="24" rx="12"/><text y="55">WIKI</text></g>
+              <g class="sat s2" transform="translate(498 184)"><circle r="30"/><rect class="sat-pill" x="-52" y="38" width="104" height="24" rx="12"/><text y="55">NODES</text></g>
+              <g class="sat s3" transform="translate(474 390)"><circle r="30"/><rect class="sat-pill" x="-52" y="38" width="104" height="24" rx="12"/><text y="55">CARDS</text></g>
+              <g class="sat s4" transform="translate(166 390)"><circle r="30"/><rect class="sat-pill" x="-52" y="38" width="104" height="24" rx="12"/><text y="55">MEDIA</text></g>
+              <g class="sat s5" transform="translate(150 172)"><circle r="30"/><rect class="sat-pill" x="-58" y="38" width="116" height="24" rx="12"/><text y="55">AGENTS</text></g>
+            </svg>
+            <div class="avatar-stack" aria-label="Phamiliars and operator personas">
+              <span title="Love">LOVE</span>
+              <span title="Truth">TRUTH</span>
+              <span title="Conviction">CONVICTION</span>
+            </div>
+          </div>
+          <article class="terminal-card" aria-label="Mission terminal">
+            <div class="terminal-top"><span></span><span></span><span></span><code>hapa://light-web-node</code></div>
+            <pre><code id="terminalText">BOOT  Hapa Light-Web node online
+MODE  Browse → Inspect → Navigate → Forge → Lore
+RULE  Absorb useful · discard useless · add unique
+NEXT  Compress memory into playable, source-backed cards</code></pre>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission section-shell" id="mission" aria-labelledby="mission-title">
+      <div class="skim-meter" aria-label="Value reclamation meter adapted from Hapa.ai">
+        <span>RECLAIM THE SKIM</span>
+        <b>$200B+</b>
+        <p>Keep creator value, provenance, and capability in the local Light-Web loop instead of surrendering it to extractive intermediaries.</p>
+      </div>
+      <div class="section-head">
+        <p class="eyebrow"><span></span> MISSION BRIEFING</p>
+        <h2 id="mission-title">Not a chatbot. Not a folder. A world that remembers how it was built.</h2>
+        <p>Hapa connects canon, development, songs, screenshots, agents, tasks, cards, and local services into a navigable memory civilization. Every interface should expose provenance, capability, gaps, and next action.</p>
+      </div>
+      <div class="briefing-grid">
+        <article class="brief-card primary-card">
+          <small>WHY</small>
+          <h3>Anti-gaslighting memory</h3>
+          <p>Preserve context, source trails, names, emotional truth, and build history so humans and AI agents do not have to reconstruct reality from fragments.</p>
+        </article>
+        <article class="brief-card">
+          <small>WHAT</small>
+          <h3>Wiki + nodes + cards + media</h3>
+          <p>The wiki is the memory palace. Nodes act. Cards compress meaning. Media loops make memory embodied. Dashboards reveal operational truth.</p>
+        </article>
+        <article class="brief-card">
+          <small>HOW</small>
+          <h3>Source → canon → card → node → ledger</h3>
+          <p>Every loop returns evidence and decisions to the wiki/Overwatch layer instead of vanishing into chat history.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="lightweb-section section-shell" id="lightweb" aria-labelledby="lightweb-title">
+      <div class="section-head split-head">
+        <div>
+          <p class="eyebrow"><span></span> BRUCE-LEE COMPRESSION</p>
+          <h2 id="lightweb-title">Absorb useful. Discard useless. Add what is uniquely Hapa.</h2>
+        </div>
+        <p>Borrowed from the current Hapa.ai Light-Web deck: make the front door explain the problem, the protocol stack, and the playable entry points before asking anyone to browse the whole vault.</p>
+      </div>
+      <div class="compression-grid">
+        <article class="compression-card broken">
+          <small>WHAT'S BROKEN</small>
+          <h3>Servers farm our data. Blockchains lag and cost. Résumés gate real talent.</h3>
+          <p>Hapa's local site should immediately name the enemy: extraction, expensive trust, and credentials that fail to capture living capability.</p>
+        </article>
+        <article class="compression-card useful">
+          <small>ABSORB USEFUL</small>
+          <h3>Light-Web, Economy, Game, Node.</h3>
+          <p>Keep the Gamma deck's strongest compression: a fairer internet, creator compensation, LitRPG mechanics, and the laptop as sovereign connection.</p>
+        </article>
+        <article class="compression-card discard">
+          <small>DISCARD USELESS</small>
+          <h3>No slide-bloat, no fake liveness, no vague magic.</h3>
+          <p>This front door keeps static truth labels, local paths, and source-backed dossiers instead of pretending every node is online.</p>
+        </article>
+        <article class="compression-card unique">
+          <small>ADD UNIQUE</small>
+          <h3>Wiki canon → card artifacts → Phamiliars → local nodes.</h3>
+          <p>The local implementation adds Calder's real vault, working card media, modal dossiers, repo maps, and the Hapa app architecture.</p>
+        </article>
+      </div>
+      <div class="protocol-layer-cake" aria-label="Protocol layer cake adapted from Hapa.ai">
+        <div><span>Apps</span><b>User-facing surfaces</b><p>Front door, Hapa AG, chat, wiki viewer, comics.</p></div>
+        <div><span>Orbits</span><b>Decentralized ecosystems</b><p>Parties, Consuls, Guilds, quests, collections.</p></div>
+        <div><span>Pipes</span><b>Communication channels</b><p>Hypercore, WebRTC, APIs, Matrix/SMTP/SMS bridges.</p></div>
+        <div><span>Block-Web</span><b>Append-only feeds</b><p>Proofs and provenance without expensive L1 dependency.</p></div>
+        <div><span>I/O</span><b>Base input/output layer</b><p>Files, notes, songs, cards, media, transcript streams.</p></div>
+      </div>
+      <div class="entry-role-row" aria-label="Choose your entry role">
+        <a href="#cards"><small>Player</small><b>Capture and train cards</b><span>Open living card media →</span></a>
+        <a href="#wiki"><small>Builder</small><b>Forge canon and apps</b><span>Browse the source vault →</span></a>
+        <a href="#nodes"><small>Guild / Enterprise</small><b>Coordinate local nodes</b><span>Inspect the node map →</span></a>
+      </div>
+    </section>
+
+    <section class="mode-section section-shell" id="modes" aria-labelledby="modes-title">
+      <div class="section-head split-head">
+        <div>
+          <p class="eyebrow"><span></span> GRAVITY UI</p>
+          <h2 id="modes-title">Mode Gravity makes the interface pull toward intent.</h2>
+        </div>
+        <p>Switch modes with the rail. The site changes atmosphere without hiding truth: browse, inspect, navigate, forge, and lore are visual gravity fields, not fake app states.</p>
+      </div>
+      <div class="mode-matrix" id="modeMatrix">
+        <button class="mode-panel active" data-mode-target="browse" type="button"><small>Browse</small><b>Scan the library</b><span>Search, filter, triage, compare.</span></button>
+        <button class="mode-panel" data-mode-target="inspect" type="button"><small>Inspect</small><b>Open the action hub</b><span>Selected entity, lineage, status, actions.</span></button>
+        <button class="mode-panel" data-mode-target="navigate" type="button"><small>Navigate</small><b>Move through graph space</b><span>Constellations, anchors, camera, reticle.</span></button>
+        <button class="mode-panel" data-mode-target="forge" type="button"><small>Forge</small><b>Ritualize creation</b><span>Source becomes artifact, card, or loop.</span></button>
+        <button class="mode-panel" data-mode-target="lore" type="button"><small>Lore</small><b>Read the chronicle</b><span>Low-density story, names, canon, memory.</span></button>
+      </div>
+    </section>
+
+    <section class="journey section-shell" id="journey" aria-labelledby="journey-title">
+      <div>
+        <p class="eyebrow"><span></span> TWO DOORS</p>
+        <h2 id="journey-title">Humans need myth and motive. Agents need operating rules.</h2>
+      </div>
+      <div class="door-grid">
+        <a class="door human" href="local-desktop/Hapa_Worldbuilding_Wiki/Canon/Introduction%20for%20Humans.md">
+          <small>Human entrance</small>
+          <strong>Understand the story, stakes, names, and world.</strong>
+          <span>Read the Hapa human intro →</span>
+        </a>
+        <a class="door agent" href="local-desktop/Hapa_Worldbuilding_Wiki/Canon/Introduction%20for%20AIs.md">
+          <small>AI-agent entrance</small>
+          <strong>Load provenance, safe behavior, and build patterns.</strong>
+          <span>Read the AI intro →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="loop-section section-shell" id="loop" aria-labelledby="loop-title">
+      <div class="section-head">
+        <p class="eyebrow"><span></span> SYSTEM LOOP</p>
+        <h2 id="loop-title">The product is circulation.</h2>
+        <p>Source material becomes wiki canon, then cards, then nodes, then app experiences, then verified ledgers and new source.</p>
+      </div>
+      <div class="loop-board" aria-label="Hapa system loop">
+        <div class="loop-step active"><i>01</i><b>Source</b><span>Chats, songs, histories, screenshots, dev notes.</span></div>
+        <div class="loop-step"><i>02</i><b>Wiki</b><span>Canon, systems, names, artifacts, provenance.</span></div>
+        <div class="loop-step"><i>03</i><b>Cards</b><span>Memory packets with lore, skills, affixes, loops.</span></div>
+        <div class="loop-step"><i>04</i><b>Nodes</b><span>Local services for media, keys, telemetry, retrieval.</span></div>
+        <div class="loop-step"><i>05</i><b>Experience</b><span>Hapa AG, chat, wiki viewer, comic, spaceship surfaces.</span></div>
+        <div class="loop-step"><i>06</i><b>Ledger</b><span>Progress, gaps, proofs, and next actions return.</span></div>
+      </div>
+    </section>
+
+    <section class="wiki-section section-shell" id="wiki" aria-labelledby="wiki-title">
+      <div class="wiki-panel wired-panel">
+        <div class="wiki-copy">
+          <p class="eyebrow"><span></span> THE MEMORY PALACE</p>
+          <h2 id="wiki-title">The wiki is now wired into the front door.</h2>
+          <p>Browse the full local Markdown vault inside this website. Selecting a page renders Markdown in the in-site reader instead of downloading the `.md` file; wikilinks, backlinks, source path, status, and raw Markdown escape hatch stay visible.</p>
+          <div class="link-cluster" id="wikiQuickLinks">
+            <a href="local-desktop/Hapa_Worldbuilding_Wiki/Canon/World%20Bible.md">World Bible</a>
+            <a href="local-desktop/Hapa_Worldbuilding_Wiki/Canon/Living%20Canon%20Map.md">Living Canon Map</a>
+            <a href="local-desktop/Hapa_Worldbuilding_Wiki/Systems/Astro%20%26%20Gravity%20Design%20System.md">Astro & Gravity</a>
+            <a href="local-desktop/Hapa_Worldbuilding_Wiki/Operations/Index.md">Operations Index</a>
+          </div>
+          <div class="snapshot-readout" id="wikiSnapshotReadout"><b>STATIC SNAPSHOT</b><span>Loading wiki index…</span></div>
+        </div>
+        <div class="data-console" aria-label="Live wiki browser">
+          <div class="browser-top"><span>Hapa_Worldbuilding_Wiki</span><code id="wikiCount">loading</code></div>
+          <div class="data-toolbar">
+            <label class="search-box"><span>Search wiki</span><input id="wikiSearch" type="search" placeholder="canon, mode gravity, Phamiliars…" autocomplete="off" /></label>
+            <select id="wikiCategory" aria-label="Filter wiki category"><option value="all">All categories</option></select>
+          </div>
+          <div class="wiki-results" id="wikiResults" aria-live="polite"></div>
+        </div>
+      </div>
+      <article class="markdown-viewer" id="wikiViewer" aria-live="polite">
+        <div class="viewer-empty"><p class="eyebrow"><span></span> WIKI READER</p><h3>Select a wiki page</h3><p>Rendered Markdown, wikilinks, backlinks, and source metadata stay inside the front door.</p></div>
+      </article>
+    </section>
+
+    <section class="nodes-section section-shell" id="nodes" aria-labelledby="nodes-title">
+      <div class="section-head split-head">
+        <div>
+          <p class="eyebrow"><span></span> NODE CONSTELLATION</p>
+          <h2 id="nodes-title">Small local services. Operator-grade surfaces. One sovereign loop.</h2>
+        </div>
+        <div>
+          <p>Filter the constellation by layer. Nodes should feel like instruments: source, status, capability, and next action.</p>
+          <div class="proof-links"><a href="node-space.html">Open 3D Node Space</a></div>
+        </div>
+      </div>
+
+      <div class="node-flowchart" aria-label="Hapa node ecosystem flowchart">
+        <div class="flowchart-head">
+          <div><p class="eyebrow"><span></span> ECOSYSTEM FLOWCHART</p><h3>Source-backed loop from memory to media to operating nodes.</h3></div>
+          <p>Static map of local repos/services and their roles. Lines describe intended data flow, not live service health.</p>
+        </div>
+        <div class="flowchart-stats" aria-label="Node graph telemetry">
+          <span><b>11</b><small>visible node groups</small></span>
+          <span><b>4</b><small>operating lanes</small></span>
+          <span><b>3</b><small>return paths</small></span>
+          <span><b>STATIC</b><small>local repo map</small></span>
+        </div>
+        <svg class="node-flow-svg" viewBox="0 0 1180 820" role="img" aria-label="Hapa node ecosystem source to wiki to cards to nodes flowchart">
+          <defs>
+            <marker id="arrow-cyan" markerWidth="14" markerHeight="14" refX="12" refY="5" orient="auto"><path d="M0,0 L0,10 L13,5 z" fill="#67e8f9"/></marker>
+            <marker id="arrow-gold" markerWidth="14" markerHeight="14" refX="12" refY="5" orient="auto"><path d="M0,0 L0,10 L13,5 z" fill="#f6c96d"/></marker>
+            <marker id="arrow-rose" markerWidth="14" markerHeight="14" refX="12" refY="5" orient="auto"><path d="M0,0 L0,10 L13,5 z" fill="#ff6d9a"/></marker>
+            <marker id="arrow-green" markerWidth="14" markerHeight="14" refX="12" refY="5" orient="auto"><path d="M0,0 L0,10 L13,5 z" fill="#68f7b0"/></marker>
+            <filter id="flowGlow"><feGaussianBlur stdDeviation="2.8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <rect x="18" y="24" width="1144" height="760" rx="24" class="flow-boundary"/>
+          <text x="44" y="62" class="flow-label">HAPA SOVEREIGN MEMORY OPERATING LOOP // STATIC SNAPSHOT</text>
+          <g class="flow-lane-labels" aria-hidden="true">
+            <text x="54" y="102">INGEST</text>
+            <text x="334" y="102">CANON</text>
+            <text x="614" y="102">FORGE</text>
+            <text x="894" y="102">RUNTIME</text>
+          </g>
+          <rect x="34" y="94" width="244" height="176" rx="18" class="flow-lane lane-source"/>
+          <rect x="314" y="94" width="244" height="176" rx="18" class="flow-lane lane-memory"/>
+          <rect x="594" y="94" width="244" height="176" rx="18" class="flow-lane lane-media"/>
+          <rect x="874" y="94" width="244" height="176" rx="18" class="flow-lane lane-surface"/>
+          <rect x="306" y="304" width="568" height="222" rx="24" class="flow-spine"/>
+          <text x="590" y="522" class="flow-spine-label">CANONICAL MEMORY SPINE</text>
+
+          <path class="flow-line cyan main" d="M264 179 C288 179 296 179 324 179"/>
+          <path class="flow-line cyan main" d="M544 179 C568 179 576 179 604 179"/>
+          <path class="flow-line green main" d="M824 179 C848 179 856 179 884 179"/>
+          <path class="flow-line cyan" d="M434 238 C434 272 474 292 512 322"/>
+          <path class="flow-line gold" d="M714 238 C714 272 676 292 650 322"/>
+          <path class="flow-line cyan" d="M264 409 C300 409 316 409 348 409"/>
+          <path class="flow-line gold" d="M832 409 C858 409 864 409 884 409"/>
+          <path class="flow-line green" d="M706 476 C768 536 842 586 884 646"/>
+          <path class="flow-line cyan" d="M474 476 C444 528 436 574 434 626"/>
+          <path class="flow-line gold" d="M586 526 C586 560 614 586 714 626"/>
+          <path class="flow-line rose dashed" d="M714 626 C686 570 660 538 642 506"/>
+          <path class="flow-line rose dashed" d="M994 646 C950 582 860 535 740 476"/>
+          <path class="flow-line cyan dashed" d="M154 626 C214 566 260 526 348 476"/>
+
+          <g class="flow-node source" transform="translate(44 120)"><rect/><text class="node-title" x="110" y="35">SOURCE STREAMS</text><text class="node-sub" x="110" y="63">Chats · songs · repos</text><text class="node-meta" x="110" y="90">screenshots · exports · docs</text></g>
+          <g class="flow-node memory" transform="translate(324 120)"><rect/><text class="node-title" x="110" y="35">WIKI VAULT</text><text class="node-sub" x="110" y="63">Canon · systems · provenance</text><text class="node-meta" x="110" y="90">world bible + operations</text></g>
+          <g class="flow-node cards" transform="translate(604 120)"><rect/><text class="node-title" x="110" y="35">CARD ANVIL</text><text class="node-sub" x="110" y="63">Cards · affixes · retrieval IDs</text><text class="node-meta" x="110" y="90">playable memory packets</text></g>
+          <g class="flow-node app" transform="translate(884 120)"><rect/><text class="node-title" x="110" y="35">HAPA AG</text><text class="node-sub" x="110" y="63">Front door · app · inspectors</text><text class="node-meta" x="110" y="90">operator console surface</text></g>
+
+          <g class="flow-node memory" transform="translate(44 350)"><rect/><text class="node-title" x="110" y="35">LANCE / SEARCH</text><text class="node-sub" x="110" y="63">Chunks · vectors · filters</text><text class="node-meta" x="110" y="90">fast retrieval lane</text></g>
+          <g class="flow-hub" transform="translate(348 326)"><rect class="flow-hub-panel" width="484" height="174" rx="24"/><circle cx="80" cy="87" r="50"/><text class="hub-title" x="264" y="64">MASTER HAPA CORE</text><text class="hub-sub" x="264" y="94">canonical index · node health · asset graph</text><text class="hub-meta" x="264" y="126">append-only context with overwrite history</text></g>
+          <g class="flow-node media" transform="translate(884 350)"><rect/><text class="node-title" x="110" y="35">MEDIA QUEUES</text><text class="node-sub" x="110" y="63">Images · videos · loops</text><text class="node-meta" x="110" y="90">LTX · MLX · paid lanes</text></g>
+
+          <g class="flow-node source" transform="translate(44 626)"><rect/><text class="node-title" x="110" y="35">DOCS / ASSETS</text><text class="node-sub" x="110" y="63">Artifacts · files · media</text><text class="node-meta" x="110" y="90">inventory + orphan scan</text></g>
+          <g class="flow-node trust" transform="translate(324 626)"><rect/><text class="node-title" x="110" y="35">AGENTS / TASKS</text><text class="node-sub" x="110" y="63">Phamiliars · work graph</text><text class="node-meta" x="110" y="90">queues + launchers</text></g>
+          <g class="flow-node trust" transform="translate(604 626)"><rect/><text class="node-title" x="110" y="35">TRUST / KEYS</text><text class="node-sub" x="110" y="63">Identity · signatures · keys</text><text class="node-meta" x="110" y="90">provenance return</text></g>
+          <g class="flow-node surface" transform="translate(884 626)"><rect/><text class="node-title" x="110" y="35">SURFACES</text><text class="node-sub" x="110" y="63">Chat · wiki · comic · games</text><text class="node-meta" x="110" y="90">human-facing apps</text></g>
+
+          <g class="flow-legend" transform="translate(44 765)"><text x="0" y="0">Legend:</text><circle cx="85" cy="-4" r="6" class="lg-cyan"/><text x="100" y="0">memory/data</text><circle cx="238" cy="-4" r="6" class="lg-gold"/><text x="253" y="0">creation/media</text><circle cx="408" cy="-4" r="6" class="lg-green"/><text x="423" y="0">runtime/surface</text><circle cx="596" cy="-4" r="6" class="lg-rose"/><text x="611" y="0">trust/provenance return</text></g>
+        </svg>
+      </div>
+
+      <div class="filter-row" role="tablist" aria-label="Node filters">
+        <button class="filter active" data-filter="all" type="button">All</button>
+        <button class="filter" data-filter="core" type="button">Core</button>
+        <button class="filter" data-filter="memory" type="button">Memory</button>
+        <button class="filter" data-filter="media" type="button">Media</button>
+        <button class="filter" data-filter="trust" type="button">Trust</button>
+        <button class="filter" data-filter="surface" type="button">Surfaces</button>
+      </div>
+      <div class="node-grid" id="nodeGrid">
+        <a class="node-card" data-kind="core surface" href="local-desktop/hapa-dev-proto/README.md"><img class="node-card-thumb" src="generated/node-icons/hapa-dev-proto/badge.svg" alt="" loading="lazy" aria-hidden="true" /><small>Main app</small><b>hapa-dev-proto</b><p>Operator UI, card library, workspace flows, SQLite projections, Hypercore/P2P experiments.</p><span>status: local repo</span></a>
+        <a class="node-card" data-kind="core media" href="local-desktop/hapa-dev-proto/nodes/hapa-mlx-station/README.md"><img class="node-card-thumb" src="generated/node-icons/hapa-mlx-station/badge.svg" alt="" loading="lazy" aria-hidden="true" /><small>Media hub</small><b>hapa-mlx-station</b><p>Apple Silicon image/media generation and authenticated local media APIs.</p><span>status: media station</span></a>
+        <a class="node-card" data-kind="core memory" href="local-desktop/Hapa_Worldbuilding_Wiki/README.md"><img class="node-card-thumb" src="generated/node-icons/hapa-worldbuilding-wiki/badge.svg" alt="" loading="lazy" aria-hidden="true" /><small>Canon vault</small><b>Worldbuilding Wiki</b><p>Markdown knowledge graph for canon, systems, cards, raw sources, and synthesis.</p><span>status: source-backed</span></a>
+        <a class="node-card" data-kind="core memory" href="local-desktop/hapa-lance-node/README.md"><img class="node-card-thumb" src="generated/node-icons/hapa-lance-node/badge.svg" alt="" loading="lazy" aria-hidden="true" /><small>Retrieval</small><b>hapa-lance-node</b><p>Cards, wiki chunks, embeddings, multimodal indexes, projection datasets.</p><span>status: index layer</span></a>
+        <a class="node-card" data-kind="core trust" href="local-desktop/hapa-crypto-node/README.md"><img class="node-card-thumb" src="generated/node-icons/hapa-crypto-node/badge.svg" alt="" loading="lazy" aria-hidden="true" /><small>Trust</small><b>hapa-crypto-node</b><p>Encryption, signatures, identity proofs, and local trust primitives.</p><span>status: proof layer</span></a>
+        <a class="node-card" data-kind="core trust" href="local-desktop/hapa-keys-node/README.md"><img class="node-card-thumb" src="generated/node-icons/hapa-keys-node/badge.svg" alt="" loading="lazy" aria-hidden="true" /><small>Secrets</small><b>hapa-keys-node</b><p>Loopback-first vault for provider keys and node tokens.</p><span>status: guarded</span></a>
+        <a class="node-card" data-kind="core memory" href="local-desktop/hapa-lore-node/README.md"><img class="node-card-thumb" src="generated/node-icons/hapa-lore-node/badge.svg" alt="" loading="lazy" aria-hidden="true" /><small>Lore service</small><b>hapa-lore-node</b><p>Chronicle, wisdom entries, searchable canon/operator history.</p><span>status: chronicle</span></a>
+        <a class="node-card" data-kind="core" href="local-desktop/hapa-telemetry-node/README.md"><img class="node-card-thumb" src="generated/node-icons/hapa-telemetry-node/badge.svg" alt="" loading="lazy" aria-hidden="true" /><small>Discovery</small><b>hapa-telemetry-node</b><p>Health, metrics, launchers, service discovery, node registry.</p><span>status: observer</span></a>
+        <a class="node-card" data-kind="core" href="local-desktop/hapa-open-tasks-node/README.md"><img class="node-card-thumb" src="generated/node-icons/hapa-open-tasks-node/badge.svg" alt="" loading="lazy" aria-hidden="true" /><small>Tasks</small><b>hapa-open-tasks-node</b><p>Kanban/task graph for Hapa work across humans and agents.</p><span>status: work graph</span></a>
+        <a class="node-card" data-kind="core trust" href="local-desktop/hapa-agent-registry-node/README.md"><img class="node-card-thumb" src="generated/node-icons/hapa-agent-registry-node/badge.svg" alt="" loading="lazy" aria-hidden="true" /><small>Agents</small><b>hapa-agent-registry-node</b><p>Agent profiles, avatar jobs, identity, onboarding metadata.</p><span>status: identity layer</span></a>
+        <a class="node-card" data-kind="core memory" href="local-desktop/hapa-anvil-node/README.md"><img class="node-card-thumb" src="generated/node-icons/hapa-anvil-node/badge.svg" alt="" loading="lazy" aria-hidden="true" /><small>Cards</small><b>hapa-anvil-node</b><p>Card standards, evaluation, forging, and artifact emission.</p><span>status: forge layer</span></a>
+        <a class="node-card" data-kind="surface" href="local-desktop/hapa-chat-app/README.md"><img class="node-card-thumb" src="generated/node-icons/hapa-chat-app/badge.svg" alt="" loading="lazy" aria-hidden="true" /><small>Workroom</small><b>hapa-chat-app</b><p>Rooms, participants, assets, agent visits, and conversation inspection.</p><span>status: social surface</span></a>
+      </div>
+    </section>
+
+    <section class="cards-section section-shell" id="cards" aria-labelledby="cards-title">
+      <div class="section-head split-head">
+        <div>
+          <p class="eyebrow"><span></span> CARD VAULT</p>
+          <h2 id="cards-title">Cards are wired as playable memory artifacts.</h2>
+        </div>
+        <p>Generated from the local wiki’s Cards folder. The Hapa.ai deck frames this as a living résumé becoming a character sheet: real skills, artifacts, lore, media, and provenance become playable memory cards.</p>
+      </div>
+
+      <div class="card-live-stage" id="cardLiveStage" aria-label="Living card media stage">
+        <div class="card-live-copy">
+          <p class="eyebrow"><span></span> LIVING CARD MEDIA</p>
+          <h3>Prioritize loops with usable card intelligence.</h3>
+          <p>Featured examples rank video loops first, then boost cards with Lore, Skills, goals/retrieval contracts, descriptions, and media prompts. Click any example to inspect the source-backed card dossier below.</p>
+          <div class="media-stats" id="cardMediaStats"><span>Loading media cards…</span></div>
+        </div>
+        <div class="living-card-grid" id="livingCardGrid" aria-live="polite"></div>
+      </div>
+
+      <div class="card-controls" aria-label="Card filters">
+        <label class="search-box"><span>Search cards</span><input id="cardSearch" type="search" placeholder="mode, song, forge, identity…" autocomplete="off" /></label>
+        <select id="cardTheme" aria-label="Filter card theme"><option value="all">All themes</option></select>
+        <select id="cardRarity" aria-label="Filter card rarity"><option value="all">All rarities</option><option value="mythic">Mythic</option><option value="legendary">Legendary</option><option value="epic">Epic</option><option value="rare">Rare</option><option value="common">Common</option></select>
+        <div class="snapshot-readout compact" id="cardSnapshotReadout"><b>STATIC SNAPSHOT</b><span>Loading card index…</span></div>
+      </div>
+      <div class="card-workbench">
+        <div class="card-gallery wired-gallery" id="cardGallery" aria-label="Hapa card gallery"></div>
+        <aside class="card-inspector" id="cardInspector" aria-live="polite" aria-label="Selected card inspector" aria-hidden="true">
+          <div class="viewer-empty"><p class="eyebrow"><span></span> INSPECTOR</p>
+          <h3>Select a card</h3>
+          <p>Click any wired card to open a centered source-backed card dossier.</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="repos-section section-shell" id="repos" aria-labelledby="repos-title">
+      <div class="section-head split-head">
+        <div>
+          <p class="eyebrow"><span></span> CODE REPOSITORY MAP</p>
+          <h2 id="repos-title">Browse local Hapa code repos and their Markdown files.</h2>
+        </div>
+        <p>This is a static, local README/Markdown snapshot: useful for orientation, not a live git status oracle. Select a repo, then select any indexed Markdown file to read it here.</p>
+      </div>
+      <div class="repo-workbench">
+        <div class="repo-list-shell">
+          <div class="data-toolbar repo-toolbar">
+            <label class="search-box"><span>Search repos</span><input id="repoSearch" type="search" placeholder="hapa-dev-proto, song registry, wiki viewer…" autocomplete="off" /></label>
+            <code id="repoCount">loading</code>
+          </div>
+          <div class="repo-list" id="repoList" aria-live="polite"></div>
+        </div>
+        <article class="repo-inspector" id="repoInspector" aria-live="polite">
+          <p class="eyebrow"><span></span> REPO INSPECTOR</p>
+          <h3>Select a repository</h3>
+          <p>Repo Markdown files will appear here with source paths and readable rendered content.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="progress-section section-shell" id="progress" aria-labelledby="progress-title">
+      <div class="section-head narrow">
+        <p class="eyebrow"><span></span> OPERATOR STATUS</p>
+        <h2 id="progress-title">Visible scaffolding: repos, wiki/canon vault, local nodes, app surfaces, and Overwatch operations spine.</h2>
+      </div>
+      <div class="status-grid">
+        <article><span>29</span><b>source repos tracked</b><p>Normalized local ecosystem inventory and README/license/git coverage.</p></article>
+        <article><span>10/10</span><b>priority systems active</b><p>Phamiliars, Wormhole, card schema, tasks, Hapa AG, sovereign memory, Overwatch protocols.</p></article>
+        <article><span>PARTIAL</span><b>truth-aware status</b><p>This website reports verified static paths and avoids pretending live services are online.</p></article>
+      </div>
+      <div class="proof-links">
+        <a href="local-desktop/Hapa_Worldbuilding_Wiki/Development/Repository%20State%20Matrix.md">Repository State Matrix</a>
+        <a href="local-desktop/Hapa_Worldbuilding_Wiki/Development/Priority%20Ranking%201-10.md">Priority Ranking</a>
+        <a href="local-desktop/.Overwatch/ecosystem/AUDIT_2026-05-22_REPO_NORMALIZATION.json">Normalization Audit</a>
+      </div>
+    </section>
+
+    <section class="roadmap-section section-shell" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="section-head">
+        <p class="eyebrow"><span></span> NEXT PHASES</p>
+        <h2 id="roadmap-title">From front door to playable memory loop.</h2>
+      </div>
+      <ol class="roadmap orbit-roadmap">
+        <li><span>Phase 0: Amoeba</span><b>Initial protocol development ✓</b><p>Static front door, wiki snapshot, source-backed cards, repo map, and modal dossiers.</p></li>
+        <li><span>Phase 1: First Consul</span><b>Governance implementation</b><p>Make Hapa work loops legible to three-person parties and agent/human review units.</p></li>
+        <li><span>Phase 2: 100 Nodes</span><b>Network expansion and stability</b><p>Connect Lance, Anvil, media, telemetry, trust, keys, lore, and chat into durable local node operations.</p></li>
+        <li><span>Phase 3: Orbit Store</span><b>Full marketplace deployment</b><p>Turn cards, Familiars, media loops, μCredit logic, and provenance into exchangeable artifacts.</p></li>
+        <li><span>12-Hour Speed-Run</span><b>Live transcript ⇒ live prototype</b><p>Compress concept, discussion, code generation, and UI assembly into visible, verifiable build rituals.</p></li>
+      </ol>
+    </section>
+
+    <section class="final-cta section-shell" aria-labelledby="final-title">
+      <p class="eyebrow"><span></span> ENTER HAPA</p>
+      <h2 id="final-title">A wiki that remembers. Nodes that act. Cards that compress meaning. Agents that can find their way back.</h2>
+      <div class="hero-actions centered">
+        <a class="button primary" href="local-desktop/Hapa_Worldbuilding_Wiki/README.md">Open the Wiki</a>
+        <a class="button ghost" href="local-desktop/hapa/docs/NODE_MAP.md">Read the Node Map</a>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="command-palette" id="commandPalette" aria-labelledby="palette-title">
+    <div class="palette-shell">
+      <div class="palette-header"><h2 id="palette-title">Hapa command map</h2><button id="closePalette" type="button" aria-label="Close">×</button></div>
+      <input id="paletteSearch" type="search" placeholder="Search wiki, nodes, cards, roadmap…" />
+      <div class="palette-results" id="paletteResults"></div>
+    </div>
+  </dialog>
+
+  <footer class="footer section-shell">
+    <span>Hapa front-door site // Astro × Gravity facelift</span>
+    <a href="local-desktop/hapa/README.md">Master repo</a>
+    <a href="local-desktop/hapa/docs/FLOWCHART.md">Flowcharts</a>
+    <a href="local-desktop/hapa/docs/WIKI_EXPANSION_MAP.md">Wiki map</a>
+  </footer>
+
+  <script src="kanban-ingress.js?v=20260531"></script>
+  <script src="app.js?v=skill-pass-20260531-kanban"></script>
+</body>
+</html>

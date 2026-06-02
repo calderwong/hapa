@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hapa Ecosystem Flowchart</title>
+<style>
+  body { margin:0; background:#020617; color:#e2e8f0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 32px; }
+  h1 { font-size: 28px; margin: 0 0 8px; }
+  p { color:#94a3b8; line-height:1.5; }
+  .card { background: #0f172a; border: 1px solid #1e293b; border-radius: 18px; padding: 18px; box-shadow: 0 20px 80px rgba(0,0,0,.35); }
+  svg { width:100%; height:auto; display:block; }
+  .node rect { fill:#0f172a; stroke-width:1.6; rx:10; }
+  .node text { fill:#e2e8f0; font-size:12px; text-anchor:middle; dominant-baseline:middle; }
+  .sub { fill:#94a3b8 !important; font-size:9px !important; }
+  .canon rect { stroke:#a78bfa; fill:rgba(76,29,149,.35); }
+  .app rect { stroke:#22d3ee; fill:rgba(8,51,68,.45); }
+  .ops rect { stroke:#fbbf24; fill:rgba(120,53,15,.32); }
+  .media rect { stroke:#fb923c; fill:rgba(251,146,60,.24); }
+  .trust rect { stroke:#fb7185; fill:rgba(136,19,55,.32); }
+  .data rect { stroke:#34d399; fill:rgba(6,78,59,.35); }
+  path { stroke:#64748b; stroke-width:1.4; fill:none; marker-end:url(#arrow); }
+  .accent { stroke:#22d3ee; }
+  .legend text { fill:#cbd5e1; font-size:11px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Hapa Ecosystem Flowchart</h1>
+  <p>Front-door map for the local Hapa workspace: wiki/canon, operations, main app, services, media, cards, world state, and trust.</p>
+  <div class="card">
+  <svg viewBox="0 0 1180 760" role="img" aria-label="Hapa ecosystem architecture flowchart">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b" stroke="none"/></marker>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    </defs>
+    <rect width="1180" height="760" fill="url(#grid)" opacity="0.55"/>
+
+    <path class="accent" d="M590 90 L230 170"/><path class="accent" d="M590 90 L590 170"/><path class="accent" d="M590 90 L950 170"/>
+    <path d="M230 250 L420 330"/><path d="M590 250 L590 330"/><path d="M950 250 L760 330"/>
+    <path d="M590 410 L220 500"/><path d="M590 410 L405 500"/><path d="M590 410 L590 500"/><path d="M590 410 L775 500"/><path d="M590 410 L960 500"/>
+    <path d="M220 580 L220 655"/><path d="M405 580 L405 655"/><path d="M590 580 L590 655"/><path d="M775 580 L775 655"/><path d="M960 580 L960 655"/>
+
+    <g class="node app" transform="translate(470 40)"><rect width="240" height="58"/><text x="120" y="24">hapa</text><text class="sub" x="120" y="42">master front door</text></g>
+    <g class="node canon" transform="translate(110 170)"><rect width="240" height="78"/><text x="120" y="26">Worldbuilding Wiki</text><text class="sub" x="120" y="47">canon, systems, cards</text><text class="sub" x="120" y="62">names, provenance</text></g>
+    <g class="node app" transform="translate(470 170)"><rect width="240" height="78"/><text x="120" y="26">hapa-dev-proto</text><text class="sub" x="120" y="47">main Hapa AG app</text><text class="sub" x="120" y="62">cards, UI, persistence</text></g>
+    <g class="node ops" transform="translate(830 170)"><rect width="240" height="78"/><text x="120" y="26">.Overwatch</text><text class="sub" x="120" y="47">inventory, reports</text><text class="sub" x="120" y="62">status, protocols</text></g>
+
+    <g class="node data" transform="translate(300 330)"><rect width="240" height="78"/><text x="120" y="26">Cards + Indexes</text><text class="sub" x="120" y="47">hapa-anvil-node</text><text class="sub" x="120" y="62">hapa-lance-node</text></g>
+    <g class="node media" transform="translate(470 330)"><rect width="240" height="78"/><text x="120" y="26">AI + Media</text><text class="sub" x="120" y="47">MLX station, LLaDA</text><text class="sub" x="120" y="62">avatars, songs, comic</text></g>
+    <g class="node trust" transform="translate(640 330)"><rect width="240" height="78"/><text x="120" y="26">Ops + Trust</text><text class="sub" x="120" y="47">telemetry, keys, tasks</text><text class="sub" x="120" y="62">agents, crypto, lore</text></g>
+
+    <g class="node media" transform="translate(100 500)"><rect width="240" height="78"/><text x="120" y="26">Media Generation</text><text class="sub" x="120" y="47">hapa-mlx-station</text><text class="sub" x="120" y="62">hapa-avatar-node</text></g>
+    <g class="node data" transform="translate(285 500)"><rect width="240" height="78"/><text x="120" y="26">Knowledge Retrieval</text><text class="sub" x="120" y="47">hapa-lance-node</text><text class="sub" x="120" y="62">wiki chunks + embeddings</text></g>
+    <g class="node ops" transform="translate(470 500)"><rect width="240" height="78"/><text x="120" y="26">Coordination</text><text class="sub" x="120" y="47">tasks, telemetry</text><text class="sub" x="120" y="62">agent registry</text></g>
+    <g class="node trust" transform="translate(655 500)"><rect width="240" height="78"/><text x="120" y="26">Trust + Identity</text><text class="sub" x="120" y="47">keys, crypto</text><text class="sub" x="120" y="62">signatures, profiles</text></g>
+    <g class="node canon" transform="translate(840 500)"><rect width="240" height="78"/><text x="120" y="26">World Surfaces</text><text class="sub" x="120" y="47">Janus, spaceship</text><text class="sub" x="120" y="62">living comic, chat</text></g>
+
+    <g class="node media" transform="translate(100 655)"><rect width="240" height="50"/><text x="120" y="20">Assets</text><text class="sub" x="120" y="36">image/video/audio sidecars</text></g>
+    <g class="node data" transform="translate(285 655)"><rect width="240" height="50"/><text x="120" y="20">Queryable Memory</text><text class="sub" x="120" y="36">cards, chunks, projections</text></g>
+    <g class="node ops" transform="translate(470 655)"><rect width="240" height="50"/><text x="120" y="20">Work Ledger</text><text class="sub" x="120" y="36">tasks, reports, status</text></g>
+    <g class="node trust" transform="translate(655 655)"><rect width="240" height="50"/><text x="120" y="20">Trusted Local Ops</text><text class="sub" x="120" y="36">secrets + identity</text></g>
+    <g class="node canon" transform="translate(840 655)"><rect width="240" height="50"/><text x="120" y="20">Experience Layer</text><text class="sub" x="120" y="36">operator/player narrative</text></g>
+
+    <g class="legend" transform="translate(42 715)"><text>Color key: cyan app/front door · violet canon/world · amber operations · orange media · rose trust · emerald data/index</text></g>
+  </svg>
+  </div>
+</div>
+</body>
+</html>

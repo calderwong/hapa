@@ -1,0 +1,42 @@
+.DS_Store
+node_modules/
+dist/
+build/
+.env
+.env.*
+*.log
+# Hapa GitHub safety: local secrets, credentials, dependencies, generated sidecars
+!.env.example
+!.env.sample
+!.env.template
+.node_token
+.auth_token
+.api_token
+*.pem
+*.key
+*.p8
+*.p12
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+*credentials.json
+*secrets.json
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.sqlite-wal
+*.sqlite-shm
+*.db-wal
+*.db-shm
+
+# Generated local site/search snapshots. Rebuild with site/build-data.py.
+site/data/hapa-index.json
+site/local-desktop
+site/wiki-assets
+site/wiki-vault
+
+# Generated media and protocol/card render artifacts. Route through vault/Hypercore
+# flows or regenerate locally instead of publishing source history.
+site/generated/
