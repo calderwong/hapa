@@ -14,6 +14,14 @@ Local workspace root assumptions in this guide:
 
 ## Hapa Ecosystem Context
 
+<p>
+  <img src="docs/assets/hapa-ecosystem-context/overview.jpg" alt="Hapa ecosystem context visual showing modular nodes, human and AI-agent interfaces, Hapa Cards, avatar-agents, Second Brain, and wiki enrichment loop" width="100%">
+</p>
+<p>
+  <img src="docs/assets/hapa-ecosystem-context/card-loop.jpg" alt="Hapa Card loop visual showing work, collaboration, utility, wisdom, and repeatable logic becoming portable Hapa Cards" width="49%">
+  <img src="docs/assets/hapa-ecosystem-context/avatar-agents.jpg" alt="Avatar-agent forge visual showing specialized identities with storage, lore, canon, card decks, skills, and protocols building nodes" width="49%">
+</p>
+
 Hapa is built as a constellation of modular nodes. Each node owns a focused capability, but participates in a shared protocol for provenance, handoff, cards, memory, and operations.
 
 Every node is designed for both human operators and AI agents. The target contract is three surfaces: a UI for direct human review/control, an API for node-to-node and agent calls, and a CLI for scripted runs, audits, and handoffs. Individual repos may be at different maturity levels, but the public contract is that humans and agents can inspect, operate, and verify the node.
