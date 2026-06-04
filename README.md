@@ -21,11 +21,12 @@ If you are new to Hapa, read in this order:
 3. `docs/FEATURE_PARITY.md`: truthful API/CLI/UI parity status for this repo.
 4. `docs/CLI.md` and `docs/API.md`: scriptable interface and local feature-spine contract.
 5. `docs/NODE_MAP.md`: what each repo/node does and where it lives.
-6. `docs/WIKI_EXPANSION_MAP.md`: which wiki pages expand each concept.
-7. `docs/OPERATING_MODEL.md`: how humans and agents should work safely in this ecosystem.
-8. `docs/GITHUB_SECRET_SAFETY_AUDIT_2026-05-23.md`: latest local push-safety audit across Hapa git repositories.
-9. `docs/KANBAN_UI_INGRESS_AUDIT.md`: current proof that node UIs link back to app-specific Overwatch Kanban boards.
-10. The source README for the node you want to run or change.
+6. `docs/NODE_THUMBNAILS.md`: GitHub-rendered thumbnails for the published Hapa node repos.
+7. `docs/WIKI_EXPANSION_MAP.md`: which wiki pages expand each concept.
+8. `docs/OPERATING_MODEL.md`: how humans and agents should work safely in this ecosystem.
+9. `docs/GITHUB_SECRET_SAFETY_AUDIT_2026-05-23.md`: latest local push-safety audit across Hapa git repositories.
+10. `docs/KANBAN_UI_INGRESS_AUDIT.md`: current proof that node UIs link back to app-specific Overwatch Kanban boards.
+11. The source README for the node you want to run or change.
 
 Published GitHub entry points:
 
@@ -122,6 +123,21 @@ flowchart TB
 - [Hapa AG / Dev Proto](https://github.com/calderwong/hapa-dev-proto-private) — Primary local-first app that consumes cards, wiki context, assets, and node services.
 - [Hapa Space](https://github.com/calderwong/hapa-space) — Unity fleet visualization of the repo/node ecosystem described here.
 - [Hapa Telemetry Node](https://github.com/calderwong/hapa-telemetry-node) — Runtime health and discovery layer for the nodes cataloged by this repo.
+
+## Node thumbnail gallery
+
+The full GitHub-rendered visual index is in [`docs/NODE_THUMBNAILS.md`](docs/NODE_THUMBNAILS.md). It covers all 40 published Hapa node repositories with repo-local thumbnails copied from existing Hapa site demo stills, Second Brain generated node heroes, or clearly labeled representative screenshots.
+
+<p>
+  <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-dev-proto.jpg" alt="hapa-dev-proto thumbnail" width="180"></a>
+  <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-worldbuilding-wiki.jpg" alt="hapa-worldbuilding-wiki thumbnail" width="180"></a>
+  <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-mlx-station.jpg" alt="hapa-mlx-station thumbnail" width="180"></a>
+  <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-space.jpg" alt="hapa-space thumbnail" width="180"></a>
+  <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-chat-app.jpg" alt="hapa-chat-app thumbnail" width="180"></a>
+  <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-anvil-node.jpg" alt="hapa-anvil-node thumbnail" width="180"></a>
+  <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-lance-node.jpg" alt="hapa-lance-node thumbnail" width="180"></a>
+  <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-telemetry-node.jpg" alt="hapa-telemetry-node thumbnail" width="180"></a>
+</p>
 
 ## The major node families
 
