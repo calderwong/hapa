@@ -27,17 +27,15 @@ If you are new to Hapa, read in this order:
 9. `docs/KANBAN_UI_INGRESS_AUDIT.md`: current proof that node UIs link back to app-specific Overwatch Kanban boards.
 10. The source README for the node you want to run or change.
 
-Fast local links:
+Published GitHub entry points:
 
-- [Hapa Worldbuilding Wiki](../Hapa_Worldbuilding_Wiki/README.md)
-- [Canon for Humans](../Hapa_Worldbuilding_Wiki/Canon/Introduction%20for%20Humans.md)
-- [Canon for AIs](../Hapa_Worldbuilding_Wiki/Canon/Introduction%20for%20AIs.md)
-- [Living Canon Map](../Hapa_Worldbuilding_Wiki/Canon/Living%20Canon%20Map.md)
-- [World Bible](../Hapa_Worldbuilding_Wiki/Canon/World%20Bible.md)
-- [Node Capability Matrix](../Hapa_Worldbuilding_Wiki/Nodes/Node%20Capability%20Matrix.md)
-- [Node Graph v2](../Hapa_Worldbuilding_Wiki/Nodes/Node%20Graph%20v2.md)
-- [Repository State Matrix](../Hapa_Worldbuilding_Wiki/Development/Repository%20State%20Matrix.md)
-- [Overwatch Knowledgebase](../.Overwatch/README.md)
+- [Hapa Worldbuilding Wiki](https://github.com/calderwong/hapa-worldbuilding-wiki) — source-package README and publication boundary.
+- [Wiki node index](https://github.com/calderwong/hapa-worldbuilding-wiki/blob/main/Nodes/Index.md) — GitHub-published node index for the wiki package.
+- [Wiki connectivity notes](https://github.com/calderwong/hapa-worldbuilding-wiki/blob/main/docs/HAPA_CONNECTIVITY.md) — published route map for adjacent Hapa nodes.
+- [Wiki publication boundary](https://github.com/calderwong/hapa-worldbuilding-wiki/blob/main/docs/PUBLICATION_BOUNDARY.md) — what stays in GitHub versus the private vault.
+- [Wiki path tokens](https://github.com/calderwong/hapa-worldbuilding-wiki/blob/main/docs/PATH_TOKENS.md) — portable path conventions for local/vault-backed wiki material.
+- [Wiki vault collections](https://github.com/calderwong/hapa-worldbuilding-wiki/blob/main/docs/VAULT_COLLECTIONS.md) — manifest-backed collections outside the Git source package.
+- [Overwatch Knowledgebase](https://github.com/calderwong/overwatch) — operations spine and source index.
 
 ## What Hapa is
 
@@ -117,70 +115,75 @@ flowchart TB
   allnodes --> master
 ```
 
+## Related Hapa nodes
+
+- [Hapa Worldbuilding Wiki](https://github.com/calderwong/hapa-worldbuilding-wiki) — Canon, systems, names, cards, and node provenance referenced by the front-door repo.
+- [Overwatch](https://github.com/calderwong/overwatch) — Operational inventory, source index, protocols, task inbox, and runbook companion.
+- [Hapa AG / Dev Proto](https://github.com/calderwong/hapa-dev-proto-private) — Primary local-first app that consumes cards, wiki context, assets, and node services.
+- [Hapa Space](https://github.com/calderwong/hapa-space) — Unity fleet visualization of the repo/node ecosystem described here.
+- [Hapa Telemetry Node](https://github.com/calderwong/hapa-telemetry-node) — Runtime health and discovery layer for the nodes cataloged by this repo.
+
 ## The major node families
 
 ### 1. Front door, operations, and canon
 
 - [hapa](.) — this repository. The human/agent onboarding hub.
-- [.Overwatch](../.Overwatch/README.md) — operations spine: inventories, status board, task inbox, reports, and cross-agent protocols.
-- [Hapa Worldbuilding Wiki](../Hapa_Worldbuilding_Wiki/README.md) — canonical Markdown knowledge graph for lore, systems, cards, names, raw sources, and development synthesis.
-- [hapa-wiki-viewer](../hapa-wiki-viewer/README.md) — UI for browsing the wiki as a local app instead of raw folders.
-- [hapa-wiki-growth-agent](../hapa-wiki-growth-agent/README.md) — bounded local-agent workflow that expands the wiki with draft articles, lore dispatches, card drafts, media hooks, and ledgers.
+- [.Overwatch](https://github.com/calderwong/overwatch) — operations spine: inventories, status board, task inbox, reports, and cross-agent protocols.
+- [Hapa Worldbuilding Wiki](https://github.com/calderwong/hapa-worldbuilding-wiki) — canonical Markdown knowledge graph for lore, systems, cards, names, raw sources, and development synthesis.
+- [hapa-wiki-viewer](https://github.com/calderwong/hapa-wiki-viewer) — UI for browsing the wiki as a local app instead of raw folders.
+- [hapa-wiki-growth-agent](https://github.com/calderwong/hapa-wiki-growth-agent) — bounded local-agent workflow that expands the wiki with draft articles, lore dispatches, card drafts, media hooks, and ledgers.
 
 ### 2. Primary app and interaction surfaces
 
-- [hapa-dev-proto](../hapa-dev-proto/README.md) — main Hapa AG Electron/React app; operator UI, card library, wormhole/workspace flows, SQLite projections, and P2P experiments.
-- [hapa-chat-app](../hapa-chat-app/README.md) — local chat/workroom app for rooms, participants, agent visits, assets, worker jobs, and conversation inspection.
-- [hapa-spaceship-desktop-hijack](../hapa-spaceship-desktop-hijack/README.md) — Janus/spaceship desktop surface prototype.
-- [hapa-living-comic](../hapa-living-comic/README.md) — native living comic viewer/editor for story panels and media-backed narrative presentation.
+- [hapa-dev-proto](https://github.com/calderwong/hapa-dev-proto-private) — main Hapa AG Electron/React app; operator UI, card library, wormhole/workspace flows, SQLite projections, and P2P experiments.
+- [hapa-chat-app](https://github.com/calderwong/hapa-chat-app) — local chat/workroom app for rooms, participants, agent visits, assets, worker jobs, and conversation inspection.
+- [hapa-spaceship-desktop-hijack](https://github.com/calderwong/hapa-spaceship-desktop-hijack) — Janus/spaceship desktop surface prototype.
+- [hapa-living-comic](https://github.com/calderwong/hapa-living-comic) — native living comic viewer/editor for story panels and media-backed narrative presentation.
 
 ### 3. AI, media, music, and creative generation
 
-- [hapa-mlx-station]($HAPA_MLX_STATION_ROOT/README.md) — Apple Silicon media-generation station and authenticated hub for local image/media jobs.
-- [hapa-llada-node](../hapa-llada-node/README.md) — local LLM/completion node for sovereign LLaDA/MLX experiments.
-- [hapa-avatar-node](../hapa-avatar-node/README.md) — avatar/phamiliar lineage generation and metadata prototype.
-- [hapa-song-registry](../hapa-song-registry/README.md) — songs, Suno/imported audio, lyrics, prompts, timing analysis, and music metadata.
-- [hapa-luminastem-station](../hapa-luminastem-station/README.md) — LuminaStem/3D/audio stem visualization prototype.
-- [Cymatica](../Project%20Cymatica_Vision/cymatica/README.md) — SwiftPM/RealityKit spatial audio and stems-to-3D experimentation.
+- [hapa-mlx-station](https://github.com/calderwong/hapa-mlx-station/blob/main/README.md) — Apple Silicon media-generation station and authenticated hub for local image/media jobs.
+- [hapa-llada-node](https://github.com/calderwong/hapa-llada-node) — local LLM/completion node for sovereign LLaDA/MLX experiments.
+- [hapa-avatar-node](https://github.com/calderwong/hapa-avatar-node) — avatar/phamiliar lineage generation and metadata prototype.
+- [hapa-song-registry](https://github.com/calderwong/hapa-song-registry) — songs, Suno/imported audio, lyrics, prompts, timing analysis, and music metadata.
+- [hapa-luminastem-station](https://github.com/calderwong/hapa-luminastem-station) — LuminaStem/3D/audio stem visualization prototype.
+- [Cymatica](https://github.com/calderwong/cymatica) — SwiftPM/RealityKit spatial audio and stems-to-3D experimentation.
 
 ### 4. Reliability, coordination, and trust
 
-- [hapa-telemetry-node](../hapa-telemetry-node/README.md) — health, metrics, launcher, node registry, and discovery hub.
-- [hapa-open-tasks-node](../hapa-open-tasks-node/README.md) — Hapa operational Kanban/task node.
-- [hapa-lore-node](../hapa-lore-node/README.md) — chronicle/search node for daily progress, wisdom, and canon/operator history.
-- [hapa-keys-node](../hapa-keys-node/README.md) — local key vault for node/provider secrets.
-- [hapa-agent-registry-node](../hapa-agent-registry-node/README.md) — agent profiles, avatar jobs, identity/onboarding metadata.
-- [hapa-crypto-node](../hapa-crypto-node/README.md) — Swift-native encryption, signatures, identity proofs, and trust primitives.
+- [hapa-telemetry-node](https://github.com/calderwong/hapa-telemetry-node) — health, metrics, launcher, node registry, and discovery hub.
+- [hapa-open-tasks-node](https://github.com/calderwong/hapa-open-tasks-node) — Hapa operational Kanban/task node.
+- [hapa-lore-node](https://github.com/calderwong/hapa-lore-node) — chronicle/search node for daily progress, wisdom, and canon/operator history.
+- [hapa-keys-node](https://github.com/calderwong/hapa-keys-node) — local key vault for node/provider secrets.
+- [hapa-agent-registry-node](https://github.com/calderwong/hapa-agent-registry-node) — agent profiles, avatar jobs, identity/onboarding metadata.
+- [hapa-crypto-node](https://github.com/calderwong/hapa-crypto-node) — Swift-native encryption, signatures, identity proofs, and trust primitives.
 
 ### 5. Cards, indexes, protocol, and world state
 
-- [hapa-anvil-node](../hapa-anvil-node/README.md) — card standardization, evaluation, forging, and artifact emission.
-- [hapa-lance-node](../hapa-lance-node/README.md) — projection/index layer for cards, wiki chunks, embeddings, and multimodal records.
-- [hapa-janus-world-node](../hapa-janus-world-node/README.md) — Janus local world truth kernel: append-only world events and derived snapshots.
-- [Consul Node Proto](../Consul%20Node%20Proto/README.md) — Warden/Heap/River proof harness and environment-up verification prototype.
-- [hapa-cultivation-suite](../pulse-node-proto-dev/hapa-cultivation-suite/README.md) — Pulse/cultivation protocol tooling monorepo.
-- [hapa-spec-scaffold](../hapa-spec-scaffold/README.md) — compact protocol/spec/test scaffold.
+- [hapa-anvil-node](https://github.com/calderwong/hapa-anvil-node) — card standardization, evaluation, forging, and artifact emission.
+- [hapa-lance-node](https://github.com/calderwong/hapa-lance-node) — projection/index layer for cards, wiki chunks, embeddings, and multimodal records.
+- [hapa-janus-world-node](https://github.com/calderwong/hapa-janus-world-node) — Janus local world truth kernel: append-only world events and derived snapshots.
+- [Consul Node Proto](https://github.com/calderwong/consul-node-proto) — Warden/Heap/River proof harness and environment-up verification prototype.
+- [hapa-cultivation-suite](https://github.com/calderwong/hapa-cultivation-suite) — Pulse/cultivation protocol tooling monorepo.
+- [hapa-spec-scaffold](https://github.com/calderwong/hapa-spec-scaffold) — compact protocol/spec/test scaffold.
 
 ### 6. Archives, capsules, and historical references
 
-- [hapa-og](../hapa-og/README.md) — older integrated Hapa app snapshot for archaeology/reference.
-- [Help Fund Hapa Capsule](../help-fun-d-hapa-plz/capsule/README.md) — funding/simulator capsule UI artifact.
+- [hapa-og](https://github.com/calderwong/hapa-og) — older integrated Hapa app snapshot for archaeology/reference.
+- [Help Fund Hapa Capsule](https://github.com/calderwong/capsule) — funding/simulator capsule UI artifact.
 
 ## Where to expand in the wiki
 
-Concept routes:
+The full canon/wiki routes are local and vault-backed. The GitHub source package intentionally publishes only the small source boundary, node index, policy docs, and vault manifests. Use these published entry points from GitHub:
 
-- Hapa as a world/canon: [Canon/World Bible](../Hapa_Worldbuilding_Wiki/Canon/World%20Bible.md), [Canon/Living Canon Map](../Hapa_Worldbuilding_Wiki/Canon/Living%20Canon%20Map.md)
-- Hapa for human readers: [Canon/Introduction for Humans](../Hapa_Worldbuilding_Wiki/Canon/Introduction%20for%20Humans.md)
-- Hapa for AI agents: [Canon/Introduction for AIs](../Hapa_Worldbuilding_Wiki/Canon/Introduction%20for%20AIs.md)
-- Node system: [Nodes/Index](../Hapa_Worldbuilding_Wiki/Nodes/Index.md), [Node Capability Matrix](../Hapa_Worldbuilding_Wiki/Nodes/Node%20Capability%20Matrix.md), [Node Graph v2](../Hapa_Worldbuilding_Wiki/Nodes/Node%20Graph%20v2.md)
-- Cards/game grammar: [Cards/ChatGPT Export Cards/Index](../Hapa_Worldbuilding_Wiki/Cards/ChatGPT%20Export%20Cards/Index.md), [Systems/media-ingestion-to-card-wiki-loop](../Hapa_Worldbuilding_Wiki/Systems/media-ingestion-to-card-wiki-loop.md)
-- Names and identities: [Names/Index of Names](../Hapa_Worldbuilding_Wiki/Names/Index%20of%20Names.md), [Names/Hapa.ai](../Hapa_Worldbuilding_Wiki/Names/Hapa.ai.md), [Names/Hapa Protocol](../Hapa_Worldbuilding_Wiki/Names/Hapa%20Protocol.md)
-- Need/economy mechanics: [Systems/need-minting-protocol](../Hapa_Worldbuilding_Wiki/Systems/need-minting-protocol.md)
-- Music as memory: [Systems/breathline-musical-memory-encoding](../Hapa_Worldbuilding_Wiki/Systems/breathline-musical-memory-encoding.md), [Systems/song-compression-every-song-is-a-zip-file-for-feeling](../Hapa_Worldbuilding_Wiki/Systems/song-compression-every-song-is-a-zip-file-for-feeling.md)
-- UI gravity/pattern language: [Systems/mode-gravity-interface-pattern](../Hapa_Worldbuilding_Wiki/Systems/mode-gravity-interface-pattern.md), [Systems/Astro & Gravity Design System](../Hapa_Worldbuilding_Wiki/Systems/Astro%20%26%20Gravity%20Design%20System.md)
-- Development priorities: [Development/Priority Ranking 1-10](../Hapa_Worldbuilding_Wiki/Development/Priority%20Ranking%201-10.md), [Development/Repository State Matrix](../Hapa_Worldbuilding_Wiki/Development/Repository%20State%20Matrix.md)
-- Operations: [Operations/Index](../Hapa_Worldbuilding_Wiki/Operations/Index.md), [Operations/Overwatch Node Registry and Status Board](../Hapa_Worldbuilding_Wiki/Operations/Overwatch%20Node%20Registry%20and%20Status%20Board.md)
+- [Hapa Worldbuilding Wiki](https://github.com/calderwong/hapa-worldbuilding-wiki) — source-package README for canon, node, and vault orientation.
+- [Nodes/Index](https://github.com/calderwong/hapa-worldbuilding-wiki/blob/main/Nodes/Index.md) — GitHub-published node index.
+- [Nodes/Existing/Hapa Worldbuilding Wiki](https://github.com/calderwong/hapa-worldbuilding-wiki/blob/main/Nodes/Existing/Hapa%20Worldbuilding%20Wiki.md) — node note for the wiki package itself.
+- [docs/HAPA_CONNECTIVITY.md](https://github.com/calderwong/hapa-worldbuilding-wiki/blob/main/docs/HAPA_CONNECTIVITY.md) — ecosystem links and publication gate notes.
+- [docs/PUBLICATION_BOUNDARY.md](https://github.com/calderwong/hapa-worldbuilding-wiki/blob/main/docs/PUBLICATION_BOUNDARY.md) — Git/vault boundary for local canon pages, generated corpora, DBs, and media.
+- [manifests/wiki-vault-collections.json](https://github.com/calderwong/hapa-worldbuilding-wiki/blob/main/manifests/wiki-vault-collections.json) — machine-readable pointer to vault-backed wiki collections.
+
+For local operators, deeper canon routes such as Canon, Cards, Systems, Names, Development, and Operations live under `$HAPA_WIKI_ROOT` / `$HAPA_VAULT_ROOT`, not as direct GitHub blob links.
 
 See `docs/WIKI_EXPANSION_MAP.md` for a longer routing table.
 
