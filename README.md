@@ -307,3 +307,13 @@ open http://127.0.0.1:8765/index.html
 This repo is an onboarding and coordination hub. It intentionally contains documentation and maps, not the implementation code for every node.
 
 Created from the local Hapa workspace inventory and the 2026-05-22 README quality pass across the Hapa source repos.
+
+<!-- HAPA_NODE_ATLAS_DEMO:START -->
+## See It In Action
+
+<a href="https://calderwong.github.io/hapa-node-atlas/">
+  <img src="https://calderwong.github.io/hapa-node-atlas/assets/atalas-hero-loop-poster.jpg" alt="Hapa Node Atlas live demo" width="360">
+</a>
+
+[Open the Hapa Node Atlas demo](https://calderwong.github.io/hapa-node-atlas/)
+<!-- HAPA_NODE_ATLAS_DEMO:END -->
