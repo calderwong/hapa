@@ -25,6 +25,7 @@ This page explains the current local source repos as parts of one Hapa ecosystem
 | Node | Local path | Status | Role | Ecosystem meaning |
 |---|---|---:|---|---|
 | hapa-dev-proto | `$HAPA_DESKTOP_ROOT/hapa-dev-proto` | Core | Main Hapa AG app | Operator UI, card library, chat/workspace flows, SQLite projections, Hypercore/P2P experiments. |
+| hapa-character-sheet | `$HAPA_DESKTOP_ROOT/hapa-character-sheet` | Core/private | Character sheet / portfolio app | Local-first resume, RPG stat sheet, skill codex, timeline, profile dossier, and desktop/API projection over Hapa Second Brain. |
 | hapa-chat-app | `$HAPA_DESKTOP_ROOT/hapa-chat-app` | Core/prototype | Chat/workroom | Rooms, participants, assets, agent visits, worker jobs, and conversation inspection. |
 | hapa-spaceship-desktop-hijack | `$HAPA_DESKTOP_ROOT/hapa-spaceship-desktop-hijack` | Prototype | Janus desktop surface | Experiments with spaceship/native desktop metaphors and shared-memory interaction. |
 | hapa-living-comic | `$HAPA_DESKTOP_ROOT/hapa-living-comic` | Prototype | Living comic app | Narrative panels and media-backed story presentation. |

@@ -140,17 +140,19 @@ flowchart TB
 - [Overwatch](https://github.com/calderwong/overwatch) — Operational inventory, source index, protocols, task inbox, and runbook companion.
 - [Hapa AG / Dev Proto](https://github.com/calderwong/hapa-dev-proto-private) — Primary local-first app that consumes cards, wiki context, assets, and node services.
 - [Hapa Space](https://github.com/calderwong/hapa-space) — Unity fleet visualization of the repo/node ecosystem described here.
+- [Hapa Character Sheet](https://github.com/calderwong/hapa-character-sheet) — Private resume, RPG stat sheet, skill codex, profile dossier, timeline, and desktop/API surface over Second Brain.
 - [Hapa Telemetry Node](https://github.com/calderwong/hapa-telemetry-node) — Runtime health and discovery layer for the nodes cataloged by this repo.
 
 ## Node thumbnail gallery
 
-The full GitHub-rendered visual index is in [`docs/NODE_THUMBNAILS.md`](docs/NODE_THUMBNAILS.md). It covers all 40 published Hapa node repositories with repo-local thumbnails copied from existing Hapa site demo stills, Second Brain generated node heroes, or clearly labeled representative screenshots.
+The full GitHub-rendered visual index is in [`docs/NODE_THUMBNAILS.md`](docs/NODE_THUMBNAILS.md). It covers all 41 published Hapa node repositories with repo-local thumbnails copied from existing Hapa site demo stills, Second Brain generated node heroes, or clearly labeled representative screenshots.
 
 <p>
   <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-dev-proto.jpg" alt="hapa-dev-proto thumbnail" width="180"></a>
   <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-worldbuilding-wiki.jpg" alt="hapa-worldbuilding-wiki thumbnail" width="180"></a>
   <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-mlx-station.jpg" alt="hapa-mlx-station thumbnail" width="180"></a>
   <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-space.jpg" alt="hapa-space thumbnail" width="180"></a>
+  <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-character-sheet.png" alt="hapa-character-sheet thumbnail" width="180"></a>
   <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-chat-app.jpg" alt="hapa-chat-app thumbnail" width="180"></a>
   <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-anvil-node.jpg" alt="hapa-anvil-node thumbnail" width="180"></a>
   <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-lance-node.jpg" alt="hapa-lance-node thumbnail" width="180"></a>
@@ -170,6 +172,7 @@ The full GitHub-rendered visual index is in [`docs/NODE_THUMBNAILS.md`](docs/NOD
 ### 2. Primary app and interaction surfaces
 
 - [hapa-dev-proto](https://github.com/calderwong/hapa-dev-proto-private) — main Hapa AG Electron/React app; operator UI, card library, wormhole/workspace flows, SQLite projections, and P2P experiments.
+- [hapa-character-sheet](https://github.com/calderwong/hapa-character-sheet) — private resume, RPG stat sheet, skill codex, profile dossier, timeline, and desktop/API app over Hapa Second Brain.
 - [hapa-chat-app](https://github.com/calderwong/hapa-chat-app) — local chat/workroom app for rooms, participants, agent visits, assets, worker jobs, and conversation inspection.
 - [hapa-spaceship-desktop-hijack](https://github.com/calderwong/hapa-spaceship-desktop-hijack) — Janus/spaceship desktop surface prototype.
 - [hapa-living-comic](https://github.com/calderwong/hapa-living-comic) — native living comic viewer/editor for story panels and media-backed narrative presentation.
