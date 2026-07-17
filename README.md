@@ -4,6 +4,16 @@ Hapa is a local-first AI/worldbuilding ecosystem: a canon wiki, a set of small c
 
 This repository is the front door. It does not replace the individual source repos or the Hapa Worldbuilding Wiki. It explains how the pieces fit together, where to start, and which node owns which responsibility.
 
+## Public ecosystem directory
+
+For a complete, audited route through every currently public Hapa repository, use [Hapa Awesome](https://github.com/calderwong/hapa-awesome). Its [human-readable catalog](https://github.com/calderwong/hapa-awesome/blob/main/docs/NODES.md) and [machine-readable registry](https://github.com/calderwong/hapa-awesome/blob/main/data/nodes.json) are the canonical public discovery surfaces. The registry is checked against GitHub's public-repository API and direct link reachability so an exploring human or agent can traverse the full public ecosystem from this README.
+
+Visual and graph entry points:
+
+- [Hapa Node Atlas](https://calderwong.github.io/hapa-node-atlas/) — public visual atlas and embedded app-surface brochure.
+- [Hapa Graphify](https://github.com/calderwong/hapa-graphify) — bounded graph exploration across repositories, protocols, boards, and memory systems.
+- [Hapa Scroll Site](https://github.com/calderwong/hapa-scroll-site) — cinematic ecosystem tour with explorable Cards.
+
 Local workspace root assumptions in this guide:
 
 - Master repo: `$HAPA_DESKTOP_ROOT/hapa`
@@ -138,7 +148,7 @@ flowchart TB
 
 - [Hapa Worldbuilding Wiki](https://github.com/calderwong/hapa-worldbuilding-wiki) — Canon, systems, names, cards, and node provenance referenced by the front-door repo.
 - [Overwatch](https://github.com/calderwong/overwatch) — Operational inventory, source index, protocols, task inbox, and runbook companion.
-- [Hapa AG / Dev Proto](https://github.com/calderwong/hapa-dev-proto-private) — Primary local-first app that consumes cards, wiki context, assets, and node services.
+- [Hapa AG / Dev Proto](https://github.com/calderwong/hapa-dev-proto) — Primary local-first app that consumes cards, wiki context, assets, and node services.
 - [Hapa Space](https://github.com/calderwong/hapa-space) — Unity fleet visualization of the repo/node ecosystem described here.
 - [Hapa Character Sheet](https://github.com/calderwong/hapa-character-sheet) — Private resume, RPG stat sheet, skill codex, profile dossier, timeline, and desktop/API surface over Second Brain.
 - [Hapa Telemetry Node](https://github.com/calderwong/hapa-telemetry-node) — Runtime health and discovery layer for the nodes cataloged by this repo.
@@ -171,7 +181,7 @@ The full GitHub-rendered visual index is in [`docs/NODE_THUMBNAILS.md`](docs/NOD
 
 ### 2. Primary app and interaction surfaces
 
-- [hapa-dev-proto](https://github.com/calderwong/hapa-dev-proto-private) — main Hapa AG Electron/React app; operator UI, card library, wormhole/workspace flows, SQLite projections, and P2P experiments.
+- [hapa-dev-proto](https://github.com/calderwong/hapa-dev-proto) — main Hapa AG Electron/React app; operator UI, card library, wormhole/workspace flows, SQLite projections, and P2P experiments.
 - [hapa-character-sheet](https://github.com/calderwong/hapa-character-sheet) — private resume, RPG stat sheet, skill codex, profile dossier, timeline, and desktop/API app over Hapa Second Brain.
 - [hapa-chat-app](https://github.com/calderwong/hapa-chat-app) — local chat/workroom app for rooms, participants, agent visits, assets, worker jobs, and conversation inspection.
 - [hapa-spaceship-desktop-hijack](https://github.com/calderwong/hapa-spaceship-desktop-hijack) — Janus/spaceship desktop surface prototype.
@@ -184,7 +194,7 @@ The full GitHub-rendered visual index is in [`docs/NODE_THUMBNAILS.md`](docs/NOD
 - [hapa-avatar-node](https://github.com/calderwong/hapa-avatar-node) — avatar/phamiliar lineage generation and metadata prototype.
 - [hapa-song-registry](https://github.com/calderwong/hapa-song-registry) — songs, Suno/imported audio, lyrics, prompts, timing analysis, and music metadata.
 - [hapa-luminastem-station](https://github.com/calderwong/hapa-luminastem-station) — LuminaStem/3D/audio stem visualization prototype.
-- [Cymatica](https://github.com/calderwong/cymatica) — SwiftPM/RealityKit spatial audio and stems-to-3D experimentation.
+- Cymatica — local-only SwiftPM/RealityKit spatial audio and stems-to-3D experimentation; discover it through the local Node Map rather than a public GitHub link.
 
 ### 4. Reliability, coordination, and trust
 
@@ -197,17 +207,17 @@ The full GitHub-rendered visual index is in [`docs/NODE_THUMBNAILS.md`](docs/NOD
 
 ### 5. Cards, indexes, protocol, and world state
 
-- [hapa-anvil-node](https://github.com/calderwong/hapa-anvil-node) — card standardization, evaluation, forging, and artifact emission.
+- `hapa-anvil-node` — local-only card standardization, evaluation, forging, and artifact emission node; discover it through the local Node Map.
 - [hapa-lance-node](https://github.com/calderwong/hapa-lance-node) — projection/index layer for cards, wiki chunks, embeddings, and multimodal records.
 - [hapa-janus-world-node](https://github.com/calderwong/hapa-janus-world-node) — Janus local world truth kernel: append-only world events and derived snapshots.
-- [Consul Node Proto](https://github.com/calderwong/consul-node-proto) — Warden/Heap/River proof harness and environment-up verification prototype.
+- Consul Node Proto — local-only Warden/Heap/River proof harness and environment-up verification prototype.
 - [hapa-cultivation-suite](https://github.com/calderwong/hapa-cultivation-suite) — Pulse/cultivation protocol tooling monorepo.
 - [hapa-spec-scaffold](https://github.com/calderwong/hapa-spec-scaffold) — compact protocol/spec/test scaffold.
 
 ### 6. Archives, capsules, and historical references
 
-- [hapa-og](https://github.com/calderwong/hapa-og) — older integrated Hapa app snapshot for archaeology/reference.
-- [Help Fund Hapa Capsule](https://github.com/calderwong/capsule) — funding/simulator capsule UI artifact.
+- `hapa-og` — local-only older integrated Hapa app snapshot for archaeology/reference.
+- Help Fund Hapa Capsule — local-only funding/simulator capsule UI artifact.
 
 ## Where to expand in the wiki
 
