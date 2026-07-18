@@ -14,9 +14,9 @@ I also extend an **open invite to for-profit and nonprofit teams and organizatio
 
 ## Public ecosystem directory
 
-For a complete, audited route through every currently public Hapa repository, use [Hapa Awesome](https://github.com/calderwong/hapa-awesome). Its [human-readable catalog](https://github.com/calderwong/hapa-awesome/blob/main/docs/NODES.md) and [machine-readable registry](https://github.com/calderwong/hapa-awesome/blob/main/data/nodes.json) are the canonical public discovery surfaces. The registry is checked against GitHub's public-repository API and direct link reachability so an exploring human or agent can traverse the full public ecosystem from this README.
+For a complete, audited route through all 50 currently registered public Hapa repositories, use [Hapa Awesome](https://github.com/calderwong/hapa-awesome). Its [human-readable catalog](https://github.com/calderwong/hapa-awesome/blob/main/docs/NODES.md) and [machine-readable registry](https://github.com/calderwong/hapa-awesome/blob/main/data/nodes.json) are the canonical public discovery surfaces. Its [repository-scope ledger](https://github.com/calderwong/hapa-awesome/blob/main/docs/REPOSITORY_SCOPE.md) accounts for all 61 public repositories on the `calderwong` account without falsely treating supporting forks or unrelated account projects as Hapa nodes.
 
-Nine public capability repositories provide focused jump-off points. A public repository is still prototype-stage unless its own evidence says otherwise, and public visibility is not automatically a license grant:
+Nine recently published capability repositories provide focused jump-off points within that larger 50-repository catalog. This is a spotlight, not the complete directory. A public repository is still prototype-stage unless its own evidence says otherwise, and public visibility is not automatically a license grant:
 
 | Repository | Artist-kit role | Bounded current state |
 | --- | --- | --- |
@@ -34,7 +34,7 @@ Visual and graph entry points:
 
 - [Hapa Node Atlas](https://calderwong.github.io/hapa-node-atlas/) — public visual atlas and embedded app-surface brochure.
 - [Hapa Graphify](https://github.com/calderwong/hapa-graphify) — bounded graph exploration across repositories, protocols, boards, and memory systems.
-- [Hapa Scroll Site](https://github.com/calderwong/hapa-scroll-site) — cinematic ecosystem tour with explorable Cards.
+- [Hapa Scroll Site](https://calderwong.github.io/hapa-scroll-site/) — live cinematic ecosystem tour with explorable Cards ([source](https://github.com/calderwong/hapa-scroll-site)).
 
 Local workspace root assumptions in this guide:
 
@@ -71,15 +71,19 @@ If you are new to Hapa, read in this order:
 3. `docs/FEATURE_PARITY.md`: truthful API/CLI/UI parity status for this repo.
 4. `docs/CLI.md` and `docs/API.md`: scriptable interface and local feature-spine contract.
 5. `docs/NODE_MAP.md`: what each repo/node does and where it lives.
-6. `docs/NODE_THUMBNAILS.md`: GitHub-rendered thumbnails for the published Hapa node repos.
-7. `docs/WIKI_EXPANSION_MAP.md`: which wiki pages expand each concept.
-8. `docs/OPERATING_MODEL.md`: how humans and agents should work safely in this ecosystem.
-9. `docs/GITHUB_SECRET_SAFETY_AUDIT_2026-05-23.md`: latest local push-safety audit across Hapa git repositories.
-10. `docs/KANBAN_UI_INGRESS_AUDIT.md`: current proof that node UIs link back to app-specific Overwatch Kanban boards.
-11. The source README for the node you want to run or change.
+6. [Hapa Awesome](https://github.com/calderwong/hapa-awesome): the canonical 50-repository public directory and account-wide scope ledger.
+7. `docs/NODE_THUMBNAILS.md`: an archival GitHub-rendered thumbnail gallery; not the completeness source.
+8. `docs/WIKI_EXPANSION_MAP.md`: which wiki pages expand each concept.
+9. `docs/OPERATING_MODEL.md`: how humans and agents should work safely in this ecosystem.
+10. `docs/GITHUB_SECRET_SAFETY_AUDIT_2026-05-23.md`: latest local push-safety audit across Hapa git repositories.
+11. `docs/KANBAN_UI_INGRESS_AUDIT.md`: current proof that node UIs link back to app-specific Overwatch Kanban boards.
+12. The source README for the node you want to run or change.
 
 Published GitHub entry points:
 
+- [Hapa Awesome](https://github.com/calderwong/hapa-awesome) — canonical public repository directory, scope ledger, and first-entry guide.
+- [Hapa Node Atlas demo](https://calderwong.github.io/hapa-node-atlas/) — visual map and embedded prototype surfaces.
+- [Hapa Scroll Site demo](https://calderwong.github.io/hapa-scroll-site/) — cinematic, scroll-driven ecosystem and Card tour.
 - [Hapa Worldbuilding Wiki](https://github.com/calderwong/hapa-worldbuilding-wiki) — source-package README and publication boundary.
 - [Wiki node index](https://github.com/calderwong/hapa-worldbuilding-wiki/blob/main/Nodes/Index.md) — GitHub-published node index for the wiki package.
 - [Wiki connectivity notes](https://github.com/calderwong/hapa-worldbuilding-wiki/blob/main/docs/HAPA_CONNECTIVITY.md) — published route map for adjacent Hapa nodes.
@@ -177,7 +181,7 @@ flowchart TB
 
 ## Node thumbnail gallery
 
-The full GitHub-rendered visual index is in [`docs/NODE_THUMBNAILS.md`](docs/NODE_THUMBNAILS.md). It covers all 41 published Hapa node repositories with repo-local thumbnails copied from existing Hapa site demo stills, Second Brain generated node heroes, or clearly labeled representative screenshots.
+The GitHub-rendered visual gallery in [`docs/NODE_THUMBNAILS.md`](docs/NODE_THUMBNAILS.md) preserves 41 illustrated repositories from an earlier packaging pass, using repo-local thumbnails copied from existing Hapa site demo stills, Second Brain generated node heroes, or clearly labeled representative screenshots. It is not the completeness source; use Hapa Awesome for the audited 50-repository public catalog.
 
 <p>
   <a href="docs/NODE_THUMBNAILS.md"><img src="docs/assets/node-thumbnails/hapa-dev-proto.jpg" alt="hapa-dev-proto thumbnail" width="180"></a>
