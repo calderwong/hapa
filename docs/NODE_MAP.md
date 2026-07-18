@@ -8,7 +8,16 @@ This page explains the current local source repos as parts of one Hapa ecosystem
 - "Prototype" means useful and concrete, but still exploratory or not yet fully integrated.
 - "Archive/reference" means do not treat it as authoritative unless explicitly instructed.
 - Individual node READMEs remain the source for run commands, dependencies, and verification details.
-- GitHub-rendered visual thumbnails for the published node repos live in `docs/NODE_THUMBNAILS.md`.
+- This page maps the local operating workspace and is not the canonical public-repository inventory.
+- The complete public inventory is [Hapa Awesome](https://github.com/calderwong/hapa-awesome), with 50 Hapa repositories in its [human catalog](https://github.com/calderwong/hapa-awesome/blob/main/docs/NODES.md), machine registry, and account-wide scope ledger.
+- GitHub-rendered visual thumbnails for an earlier illustrated subset live in `docs/NODE_THUMBNAILS.md`.
+
+## Public entry points
+
+- [Hapa Awesome](https://github.com/calderwong/hapa-awesome) — canonical public source directory and scope boundary.
+- [Hapa Node Atlas](https://calderwong.github.io/hapa-node-atlas/) — live visual atlas and embedded prototype surfaces.
+- [Hapa Scroll Site](https://calderwong.github.io/hapa-scroll-site/) — live cinematic ecosystem and Hapa Card tour.
+- [Hapa Graphify](https://github.com/calderwong/hapa-graphify) — source-backed relationship explorer.
 
 ## Front door and operations
 

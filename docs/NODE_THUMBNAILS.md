@@ -1,6 +1,8 @@
 # Hapa Node Thumbnails
 
-This gallery gives each GitHub-published Hapa node a stable, repo-local thumbnail. The images are copied from existing Hapa site demo stills, Second Brain generated node heroes, or adjacent Hapa UI screenshots so GitHub readers can scan the node graph visually without needing the private vault mounted.
+This archival gallery gives 41 illustrated Hapa and adjacent repositories a stable, repo-local thumbnail. It reflects an earlier packaging pass and is not the complete public inventory. Use [Hapa Awesome](https://github.com/calderwong/hapa-awesome) for the audited 50-repository public Hapa catalog and its explicit account-wide inclusion boundary.
+
+The images are copied from existing Hapa site demo stills, Second Brain generated node heroes, or adjacent Hapa UI screenshots so GitHub readers can scan part of the node graph visually without needing the private vault mounted.
 
 Representative substitutions are intentional and called out in the source column: a few operational repos do not yet have a dedicated screenshot, so they use the closest existing operations/dashboard still.
 
