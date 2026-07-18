@@ -1,7 +1,9 @@
 # Hapa Ecosystem Stage, Artist Kit, and Open Invite
 
-**Status:** living first-pass guidance  
-**Owner:** Hapa front door + Calder  
+**Status:** living first-pass guidance
+
+**Owner:** Hapa front door + Calder
+
 **Audience:** users, contributors, agents, for-profit teams, nonprofit organizations, and prospective integration partners
 
 ## Current ecosystem stage
