@@ -28,6 +28,7 @@ The front-door README links the public repositories for Wisdom Studio, Avatar Bu
 - Public visibility is not automatically a repository-wide license grant. Preserve the owning README's license, upstream, asset, and data boundaries.
 - A public GitHub link is discovery evidence, not live-runtime, partnership, endorsement, compatibility, decentralization, or commerce evidence.
 - When an organization proposes an integration, apply `docs/ECOSYSTEM_STAGE_AND_PARTICIPATION.md` and `docs/INTEGRATION_PROPOSAL_TEMPLATE.md`; the open invite is not a commitment.
+- Preserve Hapa Language's bounded state: Prototype 0.1 is verified locally across UI/API/CLI, while all ten bundled Cards remain candidate/inference and are not accepted for teaching.
 
 ## Safe edit boundaries
 

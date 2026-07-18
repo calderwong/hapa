@@ -208,6 +208,7 @@ The full GitHub-rendered visual index is in [`docs/NODE_THUMBNAILS.md`](docs/NOD
 - [hapa-avatar-builder](https://github.com/calderwong/hapa-avatar-builder) — canonical Avatar Card builder, Tarot Library manager, and 3D Tarot Draw workbench; the public checkout is not a stable release.
 - [hapa-roomlet](https://github.com/calderwong/hapa-roomlet) — bounded participant client for Avatar Builder Tarot rooms; local/private-DHT proof is not distinct-network or signed-release proof.
 - [hapa-subscriber-app](https://github.com/calderwong/hapa-subscriber-app) — static subscriber-experience UI sketch with no current service, persistence, authentication, Card acknowledgement, or commerce authority.
+- [hapa-language](https://github.com/calderwong/hapa-language) — verified Prototype 0.1 local-first multilingual Meaning Cards world across UI/API/CLI; its ten bundled Cards remain candidate/inference and are not accepted for teaching.
 - [hapa-character-sheet](https://github.com/calderwong/hapa-character-sheet) — private resume, RPG stat sheet, skill codex, profile dossier, timeline, and desktop/API app over Hapa Second Brain.
 - [hapa-chat-app](https://github.com/calderwong/hapa-chat-app) — local chat/workroom app for rooms, participants, agent visits, assets, worker jobs, and conversation inspection.
 - [hapa-spaceship-desktop-hijack](https://github.com/calderwong/hapa-spaceship-desktop-hijack) — Janus/spaceship desktop surface prototype.
