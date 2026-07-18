@@ -17,6 +17,18 @@
 - `site/node-space.html`, `site/node-space.js`, `site/node-space.css` — Node Space desktop UI.
 - `site/index.html`, `site/app.js`, `site/styles.css` — static front-door site and Markdown/repo reader.
 
+## Public capability jump-off set
+
+The front-door README links the public repositories for Wisdom Studio, Avatar Builder, Overcard, Second Brain, Overwind, Red Team, Roomlet, Subscriber App, and Trellis. Route humans and agents to the owning repository before describing or changing one of those capabilities.
+
+- Treat Hapa as First Pass / Prototype Stage unless a named surface has narrower evidence.
+- Preserve each repo's narrower status: Working MVP, canonical local checkout, private pre-release, active-local-private, bounded Card Plane release, lovable local MVP, working local prototype, static prototype, or Phase 0/1 prototype.
+- Do not flatten the set into one maturity claim. Subscriber App is not a service, Roomlet does not yet have distinct-network/notarized-release proof, Trellis stub parity does not prove model quality, and Wisdom Studio's Overwind publication adapter remains planned.
+- Use apps/nodes as prepared paint and work surfaces, Cards/Decks as reusable swatches and recipes, agents as paintbrushes, and protocols as custody/attribution discipline. A jump-off point is prior wisdom to inspect and adapt, not permission or proof.
+- Public visibility is not automatically a repository-wide license grant. Preserve the owning README's license, upstream, asset, and data boundaries.
+- A public GitHub link is discovery evidence, not live-runtime, partnership, endorsement, compatibility, decentralization, or commerce evidence.
+- When an organization proposes an integration, apply `docs/ECOSYSTEM_STAGE_AND_PARTICIPATION.md` and `docs/INTEGRATION_PROPOSAL_TEMPLATE.md`; the open invite is not a commitment.
+
 ## Safe edit boundaries
 
 - Prefer adding app behavior through `electron/hapa-local.js` first, then expose it through Electron IPC, CLI, and UI as appropriate.

@@ -4,9 +4,31 @@ Hapa is a local-first AI/worldbuilding ecosystem: a canon wiki, a set of small c
 
 This repository is the front door. It does not replace the individual source repos or the Hapa Worldbuilding Wiki. It explains how the pieces fit together, where to start, and which node owns which responsibility.
 
+## Current stage and how to use Hapa
+
+Treat the Hapa ecosystem as **First Pass / Prototype Stage** unless a particular repository or capability explicitly declares a narrower, evidence-backed status. Interfaces and workflows may change, and there is no ecosystem-wide guarantee of stability, compatibility, uptime, production support, or fitness for a particular use. In this documentation, **Core** describes current ecosystem importance; it does not by itself mean production-ready. A status such as released, verified, or MVP applies only to the named surface and its evidence.
+
+Hapa is meant to work like an artist kit. Apps and nodes are prepared work surfaces and specialized paints; Cards and Decks are reusable swatches, recipes, constraints, and remembered techniques; agents are paintbrushes that apply and combine them; Hapa protocols keep the canvas attributable, bounded, and reversible. Start from the closest existing app, Card, agent pattern, or protocol as a **jump-off point**, adapt that pre-existing wisdom to the new problem, verify the result, and write the useful evidence back.
+
+I also extend an **open invite to for-profit and nonprofit teams and organizations** interested in proposing a presence, service integration, public-interest pilot, attribution-preserving connector, or future decentralized-commerce experiment within Hapa. This is an invitation to explore, not a promise of partnership, acceptance, compatibility, production support, decentralization, funding, or commercial outcome. See [Ecosystem Stage, Artist Kit, and Open Invite](docs/ECOSYSTEM_STAGE_AND_PARTICIPATION.md) for the practical workflow, proposal checklist, attribution meaning, and participation boundaries.
+
 ## Public ecosystem directory
 
 For a complete, audited route through every currently public Hapa repository, use [Hapa Awesome](https://github.com/calderwong/hapa-awesome). Its [human-readable catalog](https://github.com/calderwong/hapa-awesome/blob/main/docs/NODES.md) and [machine-readable registry](https://github.com/calderwong/hapa-awesome/blob/main/data/nodes.json) are the canonical public discovery surfaces. The registry is checked against GitHub's public-repository API and direct link reachability so an exploring human or agent can traverse the full public ecosystem from this README.
+
+Nine public capability repositories provide focused jump-off points. A public repository is still prototype-stage unless its own evidence says otherwise, and public visibility is not automatically a license grant:
+
+| Repository | Artist-kit role | Bounded current state |
+| --- | --- | --- |
+| [Hapa Wisdom Studio](https://github.com/calderwong/hapa-wisdom-studio) | Card-guided writing, story evidence, and reversible revision workbench | Working MVP; Overwind publication adapter planned |
+| [Hapa Avatar Builder](https://github.com/calderwong/hapa-avatar-builder) | Avatar/media embodiment, Tarot Library/Draw, and Song Card authoring | Canonical local checkout; not a stable release |
+| [Hapa Overcard](https://github.com/calderwong/hapa-overcard) | Shared Hand/Deck/Placement/Formation/attachment/responsibility capability | `0.1.1` private pre-release; implementation in progress |
+| [Hapa Second Brain](https://github.com/calderwong/hapa-second-brain-node) | Private memory, retrieval, turn mining, provenance, and capability discovery | Active local/private; public repo excludes the private corpus |
+| [Hapa Overwind](https://github.com/calderwong/hapa-overwind-node) | Acknowledged Card subscriber history and rebuildable serving projections | Universal Card Plane v1 released; other surfaces remain bounded |
+| [Hapa Red Team](https://github.com/calderwong/hapa-red-team) | Authorized defensive observation, evidence, Findings, and repair memory | Lovable local MVP; no general remote attack surface |
+| [Hapa Roomlet](https://github.com/calderwong/hapa-roomlet) | Lightweight participant client for Avatar Builder Tarot rooms | Working local prototype; public-network/signing proof pending |
+| [Hapa Subscriber App](https://github.com/calderwong/hapa-subscriber-app) | Static subscriber-experience UI sketch | First-pass static prototype; no service or Card connection |
+| [Hapa Trellis](https://github.com/calderwong/hapa-trellis) | Image-to-3D queue/adapter with provenance-bearing Asset Cards | Phase 0/1 prototype; stub parity is not model-quality proof |
 
 Visual and graph entry points:
 
@@ -182,6 +204,10 @@ The full GitHub-rendered visual index is in [`docs/NODE_THUMBNAILS.md`](docs/NOD
 ### 2. Primary app and interaction surfaces
 
 - [hapa-dev-proto](https://github.com/calderwong/hapa-dev-proto) — main Hapa AG Electron/React app; operator UI, card library, wormhole/workspace flows, SQLite projections, and P2P experiments.
+- [hapa-wisdom-studio](https://github.com/calderwong/hapa-wisdom-studio) — Card-guided writer's workbench for source-labeled story evidence and reversible revisions; its Overwind publication adapter remains planned.
+- [hapa-avatar-builder](https://github.com/calderwong/hapa-avatar-builder) — canonical Avatar Card builder, Tarot Library manager, and 3D Tarot Draw workbench; the public checkout is not a stable release.
+- [hapa-roomlet](https://github.com/calderwong/hapa-roomlet) — bounded participant client for Avatar Builder Tarot rooms; local/private-DHT proof is not distinct-network or signed-release proof.
+- [hapa-subscriber-app](https://github.com/calderwong/hapa-subscriber-app) — static subscriber-experience UI sketch with no current service, persistence, authentication, Card acknowledgement, or commerce authority.
 - [hapa-character-sheet](https://github.com/calderwong/hapa-character-sheet) — private resume, RPG stat sheet, skill codex, profile dossier, timeline, and desktop/API app over Hapa Second Brain.
 - [hapa-chat-app](https://github.com/calderwong/hapa-chat-app) — local chat/workroom app for rooms, participants, agent visits, assets, worker jobs, and conversation inspection.
 - [hapa-spaceship-desktop-hijack](https://github.com/calderwong/hapa-spaceship-desktop-hijack) — Janus/spaceship desktop surface prototype.
@@ -192,6 +218,7 @@ The full GitHub-rendered visual index is in [`docs/NODE_THUMBNAILS.md`](docs/NOD
 - [hapa-mlx-station](https://github.com/calderwong/hapa-mlx-station/blob/main/README.md) — Apple Silicon media-generation station and authenticated hub for local image/media jobs.
 - [hapa-llada-node](https://github.com/calderwong/hapa-llada-node) — local LLM/completion node for sovereign LLaDA/MLX experiments.
 - [hapa-avatar-node](https://github.com/calderwong/hapa-avatar-node) — avatar/phamiliar lineage generation and metadata prototype.
+- [hapa-trellis](https://github.com/calderwong/hapa-trellis) — Hapa-owned queue, provenance, Card, API/CLI/UI, and adapter layer around separately owned Trellis Mac and Microsoft TRELLIS. Stub parity does not certify model access or 3D quality.
 - [hapa-song-registry](https://github.com/calderwong/hapa-song-registry) — songs, Suno/imported audio, lyrics, prompts, timing analysis, and music metadata.
 - [hapa-luminastem-station](https://github.com/calderwong/hapa-luminastem-station) — LuminaStem/3D/audio stem visualization prototype.
 - Cymatica — local-only SwiftPM/RealityKit spatial audio and stems-to-3D experimentation; discover it through the local Node Map rather than a public GitHub link.
@@ -204,12 +231,16 @@ The full GitHub-rendered visual index is in [`docs/NODE_THUMBNAILS.md`](docs/NOD
 - [hapa-keys-node](https://github.com/calderwong/hapa-keys-node) — local key vault for node/provider secrets.
 - [hapa-agent-registry-node](https://github.com/calderwong/hapa-agent-registry-node) — agent profiles, avatar jobs, identity/onboarding metadata.
 - [hapa-crypto-node](https://github.com/calderwong/hapa-crypto-node) — Swift-native encryption, signatures, identity proofs, and trust primitives.
+- [hapa-red-team](https://github.com/calderwong/hapa-red-team) — authorized local defensive observation and evidence workbench; it is not a general remote attack surface.
 
 ### 5. Cards, indexes, protocol, and world state
 
 - `hapa-anvil-node` — local-only card standardization, evaluation, forging, and artifact emission node; discover it through the local Node Map.
 - [hapa-lance-node](https://github.com/calderwong/hapa-lance-node) — projection/index layer for cards, wiki chunks, embeddings, and multimodal records.
 - [hapa-janus-world-node](https://github.com/calderwong/hapa-janus-world-node) — Janus local world truth kernel: append-only world events and derived snapshots.
+- [hapa-overcard](https://github.com/calderwong/hapa-overcard) — shared Hand, Deck, Placement, Formation, attachment, and bounded-responsibility capability; consumer records and permissions remain with their owning nodes.
+- [hapa-overwind-node](https://github.com/calderwong/hapa-overwind-node) — acknowledged Card subscriber history and rebuildable serving projections; the Card Plane release does not imply every Overwind surface is stable.
+- [hapa-second-brain-node](https://github.com/calderwong/hapa-second-brain-node) — local/private memory, retrieval, turn mining, and capability discovery; the private corpus is not part of the public repository.
 - Consul Node Proto — local-only Warden/Heap/River proof harness and environment-up verification prototype.
 - [hapa-cultivation-suite](https://github.com/calderwong/hapa-cultivation-suite) — Pulse/cultivation protocol tooling monorepo.
 - [hapa-spec-scaffold](https://github.com/calderwong/hapa-spec-scaffold) — compact protocol/spec/test scaffold.
@@ -306,6 +337,8 @@ open http://127.0.0.1:8765/index.html
 - `docs/NODE_MAP.md` — thorough list of source repos/nodes with paths, roles, and ecosystem meaning.
 - `docs/WIKI_EXPANSION_MAP.md` — routes from concepts to wiki pages.
 - `docs/OPERATING_MODEL.md` — conventions for humans/agents working in Hapa.
+- `docs/ECOSYSTEM_STAGE_AND_PARTICIPATION.md` — prototype-stage default, Paint/Paintbrush operating model, open invite, and truthful participation boundaries.
+- `docs/INTEGRATION_PROPOSAL_TEMPLATE.md` — bounded proposal template for teams and organizations suggesting an ecosystem presence or integration.
 - `docs/FLOWCHART.md` — Mermaid flowcharts for the ecosystem, onboarding, and card/media loop.
 - `docs/PROCESS_FLOW_CARDS.md` — multi-node action scripts for teachable Hapa process cards.
 - `docs/NODE_SPACE_DESKTOP.md` — Electron/local version of Node Space with wiki, song, node, filesystem, and protocol bridge.

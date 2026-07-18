@@ -25,6 +25,10 @@ This page explains the current local source repos as parts of one Hapa ecosystem
 | Node | Local path | Status | Role | Ecosystem meaning |
 |---|---|---:|---|---|
 | hapa-dev-proto | `$HAPA_DESKTOP_ROOT/hapa-dev-proto` | Core | Main Hapa AG app | Operator UI, card library, chat/workspace flows, SQLite projections, Hypercore/P2P experiments. |
+| hapa-wisdom-studio | `$HAPA_DESKTOP_ROOT/hapa-wisdom-studio` | Working MVP | Card-guided writer's workbench | Source-labeled story objects, bounded Avatar Council evaluation, reversible revisions, and append-only Card Experience. Overwind publication remains planned. |
+| hapa-avatar-builder | `$HAPA_AVATAR_BUILDER_ROOT` | Canonical local checkout / prototype | Avatar Card and Tarot workbench | Owns Avatar Card authoring, Tarot Library/Draw, and related media assembly. Canonical means the owning checkout, not a stable release. |
+| hapa-roomlet | `$HAPA_ROOMLET_ROOT` | Working local prototype | Lightweight Tarot-room participant client | Opens Avatar Builder room invites and supports bounded local participation. Local/private-DHT proof does not establish distinct-network operation or notarized distribution. |
+| hapa-subscriber-app | `$HAPA_DESKTOP_ROOT/hapa-subscriber-app` | First-pass static prototype | Subscriber-experience UI sketch | Static HTML/CSS/JS only; no service, persistence, authentication, Card acknowledgement, subscription contract, payment, or commerce authority. |
 | hapa-character-sheet | `$HAPA_DESKTOP_ROOT/hapa-character-sheet` | Core/private | Character sheet / portfolio app | Local-first resume, RPG stat sheet, skill codex, timeline, profile dossier, and desktop/API projection over Hapa Second Brain. |
 | hapa-chat-app | `$HAPA_DESKTOP_ROOT/hapa-chat-app` | Core/prototype | Chat/workroom | Rooms, participants, assets, agent visits, worker jobs, and conversation inspection. |
 | hapa-spaceship-desktop-hijack | `$HAPA_DESKTOP_ROOT/hapa-spaceship-desktop-hijack` | Prototype | Janus desktop surface | Experiments with spaceship/native desktop metaphors and shared-memory interaction. |
@@ -37,6 +41,7 @@ This page explains the current local source repos as parts of one Hapa ecosystem
 | hapa-mlx-station | `$HAPA_MLX_STATION_ROOT` | Core | Media generation station | Apple Silicon media node and authenticated hub for local generation jobs. |
 | hapa-llada-node | `$HAPA_DESKTOP_ROOT/hapa-llada-node` | Core | Local LLM node | Sovereign completions endpoint and UI for LLaDA/MLX experiments. |
 | hapa-avatar-node | `$HAPA_DESKTOP_ROOT/hapa-avatar-node` | Prototype | Avatar/phamiliar generator | Character/avatar variants, poses, metadata, and forge/export bridge. |
+| hapa-trellis | `$HAPA_TRELLIS_ROOT` | Phase 0/1 prototype | Image-to-3D queue and adapter | Hapa-owned provenance, queue, Card, API/CLI/UI, and adapter layer around separately owned Trellis Mac and Microsoft TRELLIS. Stub parity is not model-quality proof. |
 | hapa-song-registry | `$HAPA_DESKTOP_ROOT/hapa-song-registry` | Core | Song registry | Suno/imported audio, lyrics, prompts, timing analysis, and music metadata. |
 | hapa-luminastem-station | `$HAPA_DESKTOP_ROOT/hapa-luminastem-station` | Prototype | LuminaStem media station | 3D/audio stem visualization experiments and Gemini/Three-style media surfaces. |
 | Cymatica | `$HAPA_DESKTOP_ROOT/Project Cymatica_Vision/cymatica` | Prototype | Spatial audio/RealityKit | Stems-to-3D and native macOS spatial media experimentation. |
@@ -51,12 +56,16 @@ This page explains the current local source repos as parts of one Hapa ecosystem
 | hapa-keys-node | `$HAPA_DESKTOP_ROOT/hapa-keys-node` | Core | Key vault | Local secrets and provider/node keys in one loopback-first service. |
 | hapa-agent-registry-node | `$HAPA_DESKTOP_ROOT/hapa-agent-registry-node` | Core | Agent registry | Agent profiles, avatar jobs, identity, onboarding metadata. |
 | hapa-crypto-node | `$HAPA_DESKTOP_ROOT/hapa-crypto-node` | Core | Crypto/trust | Encryption, signatures, identity proofs, and trust primitives. |
+| hapa-red-team | `$HAPA_DESKTOP_ROOT/hapa-red-team` | Lovable local MVP | Defensive observation and evidence workbench | Authorized local observation, Findings, and repair memory. It does not provide arbitrary remote attack execution. |
 
 ## Cards, indexes, protocol, and world state
 
 | Node | Local path | Status | Role | Ecosystem meaning |
 |---|---|---:|---|---|
 | hapa-anvil-node | `$HAPA_DESKTOP_ROOT/hapa-anvil-node` | Core | Card forge/evaluator | Standardizes, evaluates, and forges Hapa cards and artifact vault outputs. |
+| hapa-overcard | `$HAPA_DESKTOP_ROOT/hapa-overcard` | `0.1.1` private pre-release | Shared Hand/Deck capability | Owns shared schemas, reducers, placement/formation, attachment, responsibility, adapters, and conformance; source records and permissions stay with consumers. |
+| hapa-overwind-node | `$HAPA_DESKTOP_ROOT/hapa-overwind-node` | Bounded Card Plane release | Card subscriber history and projections | Preserves acknowledged append-only Card history and lineage, with rebuildable Redis/Elasticsearch projections. Non-Card surfaces remain bounded. |
+| hapa-second-brain-node | `$HAPA_SECOND_BRAIN_ROOT` | Active local/private | Memory and capability discovery | Retrieval, turn mining, provenance, and capability discovery over private operator data; the private corpus is excluded from the public repository. |
 | hapa-lance-node | `$HAPA_DESKTOP_ROOT/hapa-lance-node` | Core | Index/projection | Cards, wiki chunks, embeddings, multimodal records, and retrieval datasets. |
 | hapa-janus-world-node | `$HAPA_DESKTOP_ROOT/hapa-janus-world-node` | Core/prototype | World truth kernel | Append-only world events, derived state snapshots, command ingestion. |
 | Consul Node Proto | `$HAPA_DESKTOP_ROOT/Consul Node Proto` | Prototype | Proof harness | Warden/Heap/River proof experiments and environment-up validation. |
